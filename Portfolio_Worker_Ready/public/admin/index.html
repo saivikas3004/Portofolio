@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Career Studio | Sai Vikas Malladi</title>
+<title>Career Studio | Sai Vikas Malladi</title><meta name="theme-color" content="#111b30">
 <style>
 :root{font-family:Inter,system-ui,Arial,sans-serif;color:#edf3f2;background:#0d1423}*{box-sizing:border-box}body{margin:0}header{border-bottom:1px solid #33435a;padding:18px max(20px,calc((100vw - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px}h1{font-size:22px;margin:0}a{color:#b5f279}main{max-width:1160px;margin:30px auto;padding:0 20px}.muted{color:#a9b9ca;font-size:13px;line-height:1.6}.banner{border:1px solid #526277;background:#1b293c;padding:16px;border-radius:14px;margin-bottom:22px}.layout{display:grid;grid-template-columns:230px 1fr;gap:22px}.sidebar,.panel{background:#172336;border:1px solid #34465a;border-radius:16px;padding:20px}.sidebar button{display:block;width:100%;text-align:left;margin:5px 0;background:transparent;color:#d6e4ef;border:0;padding:13px;border-radius:9px;cursor:pointer;font:inherit}.sidebar button.active,.sidebar button:hover{background:#344a55;color:#c7ff84}.panel{min-height:480px}h2{margin:0 0 8px;font-size:24px}label{display:block;font-weight:650;font-size:13px;margin:18px 0 7px}input,textarea,select{width:100%;background:#0d1828;color:#fff;border:1px solid #54647a;border-radius:9px;padding:12px;font:inherit}textarea{min-height:110px;resize:vertical;line-height:1.5}button.action{border:0;background:#b8f379;color:#10211b;padding:11px 16px;border-radius:9px;font-weight:700;cursor:pointer;margin:8px 8px 8px 0}button.secondary{background:#33475e;color:#fff}button.danger{background:#6d3645;color:#fff}.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.item{border:1px solid #3d5267;padding:16px;border-radius:12px;margin:12px 0}.item h3{margin:0 0 8px;font-size:17px}.hide{display:none}.pill{display:inline-block;background:#30493b;color:#d1ffaf;padding:5px 10px;border-radius:30px;font-size:12px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.notice{background:#2b3144;border-left:3px solid #c7ff84;padding:12px;margin:12px 0;border-radius:5px}.preview{background:#fff;color:#202936;border-radius:10px;padding:26px;white-space:pre-wrap;font:14px/1.6 Arial,sans-serif;margin:16px 0}.preview h3{font-size:22px;margin:0 0 8px}.preview strong{color:#183b4b}#status{font-size:13px;color:#b8f379}@media(max-width:750px){.layout{grid-template-columns:1fr}.sidebar{display:flex;overflow-x:auto;padding:8px}.sidebar button{white-space:nowrap;width:auto}.two{grid-template-columns:1fr}}
 @media print{header,.sidebar,.banner,.actions,.muted,.controls,#status{display:none!important}body,main,.layout,.panel{background:white!important;color:black!important;display:block!important;margin:0!important;padding:0!important;border:0!important}.preview{margin:0!important;padding:0!important}.panel>*:not(.printable){display:none!important}}
@@ -37,11 +37,95 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
  button.action{width:100%;margin:5px 0}
 }
 @media print{.sidebar{display:none!important}.panel{border:0!important;box-shadow:none!important}.preview{overflow:visible!important}}
-</style><style id="career-workspace-v3">.panel{min-width:0}.panel .item p{overflow-wrap:anywhere}.sidebar button{font-size:13px}#draft-history textarea{min-height:105px;font-size:13px}.row a.action{display:inline-flex;align-items:center;text-decoration:none}.panel h3 .pill{vertical-align:middle;font-size:11px;margin-left:8px}@media(max-width:750px){.sidebar{scrollbar-width:none}.sidebar::-webkit-scrollbar{display:none}.panel{min-height:0}#job-list .row button,#job-list .row a{min-height:40px}}</style></head>
+</style><style id="career-workspace-v3">.panel{min-width:0}.panel .item p{overflow-wrap:anywhere}.sidebar button{font-size:13px}#draft-history textarea{min-height:105px;font-size:13px}.row a.action{display:inline-flex;align-items:center;text-decoration:none}.panel h3 .pill{vertical-align:middle;font-size:11px;margin-left:8px}@media(max-width:750px){.sidebar{scrollbar-width:none}.sidebar::-webkit-scrollbar{display:none}.panel{min-height:0}#job-list .row button,#job-list .row a{min-height:40px}}</style><style id="career-studio-redesign-v4">
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+:root{font-family:'DM Sans',Inter,system-ui,sans-serif;color:#eaf0fc;background:#0c1324}
+body{background:radial-gradient(ellipse at 75% 0%,#24304b 0%,transparent 38%),linear-gradient(180deg,#101a2d 0%,#0c1324 65%);min-height:100vh}
+header{max-width:none;padding:18px max(24px,calc((100vw - 1340px)/2));background:rgba(13,21,37,.84);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff17;position:relative;z-index:2}
+header h1{font-family:Outfit,system-ui,sans-serif;font-size:23px;letter-spacing:-.045em;display:flex;align-items:center;gap:12px}
+header .pill{letter-spacing:.055em;font-size:10px!important;text-transform:uppercase;background:#c0f49f13!important;color:#baf19b!important;border:1px solid #b9ee9b45;padding:7px 10px}
+header .muted{margin-top:4px;color:#899cb9}
+header .row{gap:18px}
+header .row>a{font-size:13px;color:#d8e4fb;text-decoration:none;font-weight:650}
+header .row>a:hover{text-decoration:underline;color:#bcf394}
+header #sign-out{margin:0!important;padding:10px 16px;background:#ffffff0b!important;border:1px solid #ffffff36!important;color:#e8f0ff!important;font-size:12px;border-radius:10px}
+header #sign-out:hover{background:#ed67702b!important;border-color:#ed67707d!important}
+main{max-width:1340px;margin:29px auto 70px;padding:0 24px}
+.workspace-hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 260px;align-items:center;overflow:hidden;padding:42px clamp(28px,5vw,64px);min-height:285px;border-radius:26px;background:radial-gradient(circle at 88% 18%,#8dd8ff3d,transparent 34%),linear-gradient(115deg,#263e75,#314a88 58%,#556caa);border:1px solid #a4b9ec40;box-shadow:0 24px 60px #0003;margin-bottom:20px}
+.workspace-hero:after{content:'';position:absolute;right:14%;bottom:-70px;width:270px;height:270px;border:1px solid #ffffff22;border-radius:50%;pointer-events:none}
+.workspace-hero-main{position:relative;z-index:1}
+.workspace-kicker{display:inline-flex;align-items:center;gap:9px;color:#d8e8ff;font-size:10px;font-weight:800;letter-spacing:.19em}
+.live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c0f59c;box-shadow:0 0 0 5px #c0f59c24}
+.workspace-hero h2{font-family:Outfit,system-ui,sans-serif;color:white;font-weight:700;letter-spacing:-.055em;line-height:1.02;font-size:clamp(33px,4.4vw,57px);margin:18px 0 17px}
+.workspace-hero h2 em{font-style:normal;color:#bdf4a2}
+.workspace-hero p{max-width:630px;color:#e3ecff;line-height:1.7;font-size:14px;margin:0}
+.workspace-hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.hero-action{cursor:pointer;font:700 12px 'DM Sans',sans-serif;padding:13px 17px;border-radius:10px;border:1px solid #ffffff83;min-height:43px}
+.hero-action span{margin-left:8px}
+.hero-action-primary{background:#baf391;color:#203650;border-color:#baf391}
+.hero-action-primary:hover{background:#d3ffb6}
+.hero-action-outline{background:#ffffff11;color:#fff}.hero-action-outline:hover{background:#ffffff26}
+.workspace-hero-aside{display:flex;align-items:center;flex-direction:column;gap:21px;position:relative;z-index:1}
+.workspace-orbit{position:relative;width:174px;height:174px;border:1px solid #ffffff66;border-radius:50%;display:grid;place-items:center;background:#ffffff0d;box-shadow:0 0 0 19px #ffffff08,0 0 0 40px #ffffff08}
+.workspace-monogram{font-family:Outfit,sans-serif;font-size:67px;font-weight:800;letter-spacing:-.11em;color:white;padding-right:11px}.workspace-monogram span{color:#baf391}
+.orb{position:absolute;background:#dbe8ff;color:#305092;width:30px;height:30px;border-radius:11px;display:grid;place-items:center;font-size:17px;box-shadow:0 7px 15px #0002}
+.orb-one{top:-7px;right:16px}.orb-two{bottom:3px;left:-12px}.orb-three{bottom:0;right:4px}
+.workspace-aside-label{color:#e2ecffb9;font-size:10px;font-weight:800;letter-spacing:.22em}.workspace-aside-label span{padding:0 6px;color:#baf391}
+.workspace-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 16px}
+.workspace-tile{display:flex;align-items:center;text-align:left;gap:14px;border-radius:16px;border:1px solid #354563;background:#192740;padding:18px;cursor:pointer;font:inherit;color:#eef4ff;min-width:0;transition:background .2s,border-color .2s,transform .2s}
+.workspace-tile:hover{background:#233755;border-color:#819aca;transform:translateY(-2px)}
+.tile-icon{height:42px;width:42px;flex:0 0 42px;display:grid;place-items:center;border:1px solid #9bc1e04d;border-radius:13px;background:#bed5f51a;color:#c3edff;font-size:22px}
+.workspace-tile strong{display:block;font-size:13px;margin-bottom:5px}.workspace-tile small{display:block;color:#a5b8d3;font-size:11px;line-height:1.3}
+.tile-arrow{margin-left:auto;color:#c5eba9;font-size:20px;flex:0 0 auto}
+.banner{display:flex;gap:12px;background:#acdcf00c;border:1px solid #9bb1d23a;color:#9eb2cd;padding:15px 19px;margin-bottom:20px;border-radius:13px;font-size:12px;line-height:1.65}
+.banner strong{color:#dbe7fc}.banner-mark{color:#b7ddff;font-size:18px}
+.layout{grid-template-columns:248px minmax(0,1fr);gap:20px;align-items:start}
+.sidebar{background:#131f34;border:1px solid #2e4160;border-radius:18px;padding:19px 11px;position:sticky;top:18px;box-shadow:0 15px 40px #00000020}
+.sidebar-caption{color:#6f88ad;font-size:10px;font-weight:800;letter-spacing:.16em;padding:5px 13px 14px}
+.sidebar button{display:flex;gap:12px;align-items:center;margin:2px 0;padding:13px 13px;width:100%;font-size:13px;color:#b3c4dd;border-radius:11px;transition:background .15s,color .15s}
+.sidebar button.active{background:linear-gradient(90deg,#bdf3a4 0%,#9fdeb5 100%);color:#18344b;font-weight:800;box-shadow:0 7px 19px #a3e7ae18}
+.sidebar button:not(.active):hover{background:#263957;color:#f3f7ff}
+.nav-icon{width:24px;text-align:center;font-size:17px;flex:0 0 24px;opacity:.9}
+.panel{background:#19263e;border:1px solid #334968;border-radius:20px;padding:clamp(21px,3vw,35px);min-height:540px;box-shadow:0 16px 50px #00000020}
+.panel h2{font:700 clamp(23px,2.6vw,30px)/1.2 Outfit,system-ui,sans-serif;letter-spacing:-.045em;color:#fff;margin:0 0 10px}
+.panel h2:after{content:'';display:block;width:34px;height:3px;background:#b7ef96;border-radius:2px;margin-top:15px}
+.panel>.muted{max-width:780px;margin:0 0 24px}
+.panel h3{font-family:Outfit,system-ui,sans-serif;color:#f1f6ff}
+.panel label{font-size:12px;letter-spacing:.015em;color:#c2d2e9;margin-top:19px}
+.panel input,.panel textarea,.panel select{border:1px solid #445b7a;background:#101d31;border-radius:11px;padding:13px 14px;color:#f4f7ff;line-height:1.45;transition:border-color .15s,box-shadow .15s}
+.panel input:hover,.panel textarea:hover,.panel select:hover{border-color:#7088aa}
+.panel input:focus,.panel textarea:focus,.panel select:focus{outline:none;border-color:#bbeea1;box-shadow:0 0 0 3px #b8f19320}
+.panel input::placeholder,.panel textarea::placeholder{color:#8499b6}
+button.action{font-family:'DM Sans',system-ui,sans-serif;border-radius:10px;font-size:12px;padding:13px 17px;transition:filter .15s,transform .15s;background:#b8f379;color:#162c29}
+button.action:hover:not(:disabled){filter:brightness(1.1);transform:translateY(-1px)}
+button.action:disabled{opacity:.55;cursor:not-allowed}
+button.secondary{background:#304564;color:#e4efff;border:1px solid #526b8b}
+button.danger{background:#713746;color:#ffe4e7;border:1px solid #9c566b}
+.panel .item{background:#152238;border:1px solid #354968;border-radius:14px;padding:19px;margin:15px 0}
+.panel .notice{background:#b5ef9a0a;border-left:3px solid #b9ef96;color:#c0d2e8;border-radius:10px;padding:15px;font-size:12px;line-height:1.65}
+.panel .pill{background:#baf39c1c;color:#c3efab}
+.panel .preview{border:1px solid #cbd8e9;box-shadow:0 14px 32px #0002}
+#status{margin-top:19px;color:#b9e6a2;font-size:12px}
+@media(max-width:960px){.layout{grid-template-columns:211px minmax(0,1fr)}.workspace-hero{grid-template-columns:1fr 180px}.workspace-orbit{width:130px;height:130px}.workspace-monogram{font-size:50px}.workspace-tile{padding:13px;gap:9px}.tile-icon{width:35px;height:35px;flex-basis:35px}}
+@media(max-width:750px){main{padding:0 13px;margin:15px auto}.workspace-hero{grid-template-columns:1fr;min-height:0;padding:27px 24px;border-radius:18px}.workspace-hero h2{font-size:36px}.workspace-hero-aside{display:none}.workspace-hero p{font-size:13px}.workspace-hero-actions{margin-top:21px}.workspace-summary{grid-template-columns:1fr;gap:8px}.workspace-tile{padding:13px 15px}.tile-icon{width:36px;height:36px;flex-basis:36px}.banner{padding:12px 14px;margin-bottom:13px}.layout{display:block}.sidebar{position:sticky;top:0;z-index:12;display:flex;overflow-x:auto;gap:3px;padding:8px;margin-bottom:12px;scrollbar-width:none;border-radius:13px}.sidebar-caption{display:none}.sidebar button{white-space:nowrap;flex:0 0 auto;width:auto;padding:11px 13px}.nav-icon{width:auto;flex:0 0 auto;font-size:15px}.panel{padding:20px;min-height:0}.panel h2{font-size:25px}header{padding:15px 14px}header h1{font-size:19px}header .pill{display:none}header .row{gap:10px}header .row>a{font-size:11px}header #sign-out{font-size:11px;padding:9px 11px}}
+@media(max-width:390px){header h1{font-size:17px}.workspace-hero h2{font-size:31px}.workspace-hero{padding:23px 19px}.hero-action{font-size:11px;padding:12px}.panel{padding:16px}}
+@media print{.workspace-hero,.workspace-summary,.banner{display:none!important}.panel{background:#fff!important;box-shadow:none!important;border:0!important}.panel h2:after{display:none!important}}
+@media(prefers-reduced-motion:reduce){.workspace-tile,button.action{transition:none!important}}
+</style></head>
 <body><header><div><h1>Career Studio <span class="pill">Owner workspace</span></h1><div class="muted">Résumé and cover-letter editor</div></div><div class="row"><a href="/">← Public portfolio</a><button type="button" class="action danger" id="sign-out">Sign out</button></div></header>
-<main><div class="banner"><strong>Security and saving:</strong> Admin access is protected by your Cloudflare Worker password check. <strong>Set the ADMIN_PASSWORD secret before publishing.</strong> Drafts are saved only in this browser, not in a cloud account. Export a JSON backup regularly. The AI Agent works after you configure GEMINI_API_KEY as a Cloudflare secret.</div>
-<div class="layout"><nav class="sidebar" aria-label="Editor sections">
-<button data-tab="agent">✦ AI Agent</button><button data-tab="jobs">Job tracker</button><button data-tab="versions">Draft history</button><button class="active" data-tab="profile">Profile & skills</button><button data-tab="experience">Experience</button><button data-tab="projects">Projects</button><button data-tab="resume">Résumé builder</button><button data-tab="letter">Cover letter</button><button data-tab="settings">Backup & settings</button></nav>
+<main>
+<section class="workspace-hero" aria-label="Workspace overview">
+<div class="workspace-hero-main"><span class="workspace-kicker"><span class="live-dot" aria-hidden="true"></span> PRIVATE WORKSPACE</span><h2>Your career workspace,<br><em>all in one place.</em></h2><p>Organise your experience, keep track of opportunities and prepare standout applications—with your information under your control.</p><div class="workspace-hero-actions"><button type="button" class="hero-action hero-action-primary" data-open-tab="resume">Build a résumé <span aria-hidden="true">↗</span></button><button type="button" class="hero-action hero-action-outline" data-open-tab="agent">Open AI assistant <span aria-hidden="true">✦</span></button></div></div>
+<div class="workspace-hero-aside" aria-hidden="true"><div class="workspace-orbit"><span class="orb orb-one">✦</span><span class="orb orb-two">↗</span><span class="orb orb-three">◈</span><div class="workspace-monogram">SV<span>.</span></div></div><div class="workspace-aside-label">PLAN <span>·</span> CREATE <span>·</span> REFINE</div></div>
+</section>
+<div class="workspace-summary" aria-label="Quick access">
+<button type="button" class="workspace-tile" data-open-tab="profile"><span class="tile-icon">◉</span><span><strong>Master profile</strong><small>Keep your details current</small></span><span class="tile-arrow">↗</span></button>
+<button type="button" class="workspace-tile" data-open-tab="jobs"><span class="tile-icon">▤</span><span><strong>Opportunity tracker</strong><small>Manage applications</small></span><span class="tile-arrow">↗</span></button>
+<button type="button" class="workspace-tile" data-open-tab="versions"><span class="tile-icon">◷</span><span><strong>Draft archive</strong><small>Review saved versions</small></span><span class="tile-arrow">↗</span></button>
+</div>
+<div class="banner"><span class="banner-mark" aria-hidden="true">ⓘ</span><div><strong>Your work stays in this browser.</strong> Profiles, applications and drafts are saved locally—not synced to a cloud account. Export a JSON backup in Settings to protect your work. Gemini drafting requires a configured API key.</div></div>
+<div class="layout"><nav class="sidebar" aria-label="Editor sections"><div class="sidebar-caption">WORKSPACE MENU</div>
+<button data-tab="agent"><span class="nav-icon">✦</span> AI Assistant</button><button data-tab="jobs"><span class="nav-icon">▤</span> Job Tracker</button><button data-tab="versions"><span class="nav-icon">◷</span> Draft History</button><button class="active" data-tab="profile"><span class="nav-icon">◉</span> Profile &amp; Skills</button><button data-tab="experience"><span class="nav-icon">▥</span> Experience</button><button data-tab="projects"><span class="nav-icon">◇</span> Projects</button><button data-tab="resume"><span class="nav-icon">▣</span> Résumé Builder</button><button data-tab="letter"><span class="nav-icon">✉</span> Cover Letter</button><button data-tab="settings"><span class="nav-icon">⚙</span> Backups &amp; Settings</button></nav>
 <div>
 <section class="panel hide" id="agent"><h2>✦ Gemini Career Agent</h2>
  <p class="muted">Generate résumé summaries, role-specific cover letters and skills using your master career profile. Gemini needs a Cloudflare encrypted secret named <code>GEMINI_API_KEY</code>. AI drafts are suggestions only: no automatic public publishing, applications or unverified claims.</p>
@@ -64,4 +148,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
 </div></div><p id="status" role="status"></p></main>
 <script>
 (()=>{'use strict';document.getElementById('sign-out')?.addEventListener('click',()=>{sessionStorage.removeItem('sv_admin_tab_session_v1');location.replace('/admin/')})})();
-</script><script src="/admin/editor.js"></script><script src="/admin/jobs.js"></script><script src="/admin/agent.js"></script></body></html>
+</script><script src="/admin/editor.js"></script><script src="/admin/jobs.js"></script><script src="/admin/agent.js"></script><script id="dashboard-navigation-v4">
+(()=>{'use strict';document.querySelectorAll('[data-open-tab]').forEach(button=>button.addEventListener('click',()=>{const tab=document.querySelector('.sidebar button[data-tab="'+button.dataset.openTab+'"]');if(tab){tab.click();document.querySelector('.layout')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}}))})();
+</script></body></html>
