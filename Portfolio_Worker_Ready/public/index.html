@@ -184,6 +184,10 @@ img{height:auto}
  .navlinks,.navlinks.open{scroll-behavior:auto!important}
  .shape{animation:none!important}
 }
+</style><style id="layout-visibility-fix-v7">
+/* Content remains readable if JavaScript or an animation fails */
+.reveal{opacity:1!important;filter:none!important;transform:none!important}
+@media(max-width:760px){.section{padding-block:54px!important}.hero-inner{padding-block:42px 48px!important}.hero-art{min-height:210px!important}}
 </style></head>
 <body><div aria-hidden="true" id="reading-progress-v4"></div>
 <a class="skip" href="#main">Skip to content</a>
@@ -240,55 +244,7 @@ body{background:var(--cream)}::selection{background:#f5b48c;color:#18372d}
 @media(max-width:900px){.case-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.case-grid{grid-template-columns:1fr}.case-card{padding:21px}.case-diagram{justify-content:flex-start;gap:12px}.hero h1{letter-spacing:-.05em}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-</style><meta property="og:title" content="Sai Vikas Malladi — Systems Analyst Portfolio"><meta property="og:description" content="Information systems, data quality, process improvement and operational experience."><meta property="og:type" content="website"><link rel="canonical" href="https://saivikasmalladi.com/"></head><body><button class="print" onclick="window.print()">Print / Save as PDF</button><h1>Sai Vikas Malladi</h1><p class="sub">${role.name} | South Australia | <a href="${linkedIn}">LinkedIn profile</a></p><h2>Professional summary</h2><p>${role.summary}</p><h2>Relevant skills</h2><p>${skills}</p><h2>Experience highlights</h2>${experience.map(([t,d])=>`<h3>${t}</h3><p>${d}</p>`).join('')}<h2>Professional learning</h2><ul><li>Applied Data Science I: Scientific Computing & Python — WorldQuant University</li><li>Applied Data Science II: Machine Learning & Statistical Analysis — WorldQuant University</li><li>Additional learning: SQL, network security and Databricks (see LinkedIn for credential details)</li></ul><p><small>Portfolio-generated draft. Add verified employers, employment dates, education and contact details before submitting.</small></p><script id="light-atelier-motion">
-/* light card motion: decorative only, no authentication changes */
-(()=>{
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
- if(!reduced.matches && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
-  document.querySelectorAll('.card,.project-card,.case-card,.learn-card,.about-card').forEach(el=>{
-    el.dataset.light3d='true';
-    el.addEventListener('pointermove',e=>{
-      const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-      el.style.setProperty('--light-tilt-x',(-y*5).toFixed(2)+'deg');
-      el.style.setProperty('--light-tilt-y',(x*5).toFixed(2)+'deg');
-    },{passive:true});
-    el.addEventListener('pointerleave',()=>{el.style.setProperty('--light-tilt-x','0deg');el.style.setProperty('--light-tilt-y','0deg')},{passive:true});
-  });
- }
- if(!reduced.matches){
-  let timer;
-  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{
-    document.body.classList.remove('light-3d-changing');
-    void document.body.offsetWidth;
-    document.body.classList.add('light-3d-changing');
-    clearTimeout(timer);timer=setTimeout(()=>document.body.classList.remove('light-3d-changing'),700);
-  }));
- }
-})();
-</script><script id="mobile-nav-v6">
-(()=>{
- const button=document.querySelector('.menu'), nav=document.querySelector('#navigation');
- if(!button||!nav)return;
- // Existing menu code handles toggling. Add keyboard dismissal and screen-reader focus.
- document.addEventListener('keydown',event=>{
-   if(event.key==='Escape'&&nav.classList.contains('open')){
-     nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='☰';button.focus();
-   }
- });
- document.addEventListener('pointerdown',event=>{
-   if(nav.classList.contains('open')&&!nav.contains(event.target)&&!button.contains(event.target)){
-     nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='☰';
-   }
- });
- const viewport=window.matchMedia('(min-width: 761px)');
- const close=()=>{
-   if(viewport.matches&&nav.classList.contains('open')){
-     nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='☰';
-   }
- };
- viewport.addEventListener?.('change',close);
-})();
-</script></body></html>`}
+</style><meta property="og:title" content="Sai Vikas Malladi — Systems Analyst Portfolio"><meta property="og:description" content="Information systems, data quality, process improvement and operational experience."><meta property="og:type" content="website"><link rel="canonical" href="https://saivikasmalladi.com/"></head><body><button class="print" onclick="window.print()">Print / Save as PDF</button><h1>Sai Vikas Malladi</h1><p class="sub">${role.name} | South Australia | <a href="${linkedIn}">LinkedIn profile</a></p><h2>Professional summary</h2><p>${role.summary}</p><h2>Relevant skills</h2><p>${skills}</p><h2>Experience highlights</h2>${experience.map(([t,d])=>`<h3>${t}</h3><p>${d}</p>`).join('')}<h2>Professional learning</h2><ul><li>Applied Data Science I: Scientific Computing & Python — WorldQuant University</li><li>Applied Data Science II: Machine Learning & Statistical Analysis — WorldQuant University</li><li>Additional learning: SQL, network security and Databricks (see LinkedIn for credential details)</li></ul><p><small>Portfolio-generated draft. Add verified employers, employment dates, education and contact details before submitting.</small></p></body></html>`}
 
 document.getElementById('letter-btn').addEventListener('click',()=>{const role=roles[roleChoice.value];const content=`Sai Vikas Malladi
 South Australia
@@ -356,4 +312,54 @@ const note=document.createElement('p');note.className='match-note';note.textCont
 </script>
 <button aria-label="Back to top" id="back-to-top-v4" title="Back to top">↑</button><script>
 (()=>{const bar=document.getElementById('reading-progress-v4'),up=document.getElementById('back-to-top-v4'),nav=document.querySelector('.nav'),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let scheduled=false;function update(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{bar.style.transform=`scaleX(${Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight))})`;nav.classList.toggle('is-scrolled',scrollY>20);up.classList.toggle('show',scrollY>600);scheduled=false})}addEventListener('scroll',update,{passive:true});update();up.addEventListener('click',()=>scrollTo({top:0,behavior:reduce?'instant':'smooth'}));if('IntersectionObserver'in window){const links=[...document.querySelectorAll('.navlinks a[href^="#"]')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-15% 0px -65% 0px'});sections.forEach(s=>io.observe(s))}})();
-</script></body></html>
+</script><script id="light-atelier-motion">
+/* light card motion: decorative only, no authentication changes */
+(()=>{
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ if(!reduced.matches && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+  document.querySelectorAll('.card,.project-card,.case-card,.learn-card,.about-card').forEach(el=>{
+    el.dataset.light3d='true';
+    el.addEventListener('pointermove',e=>{
+      const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.setProperty('--light-tilt-x',(-y*5).toFixed(2)+'deg');
+      el.style.setProperty('--light-tilt-y',(x*5).toFixed(2)+'deg');
+    },{passive:true});
+    el.addEventListener('pointerleave',()=>{el.style.setProperty('--light-tilt-x','0deg');el.style.setProperty('--light-tilt-y','0deg')},{passive:true});
+  });
+ }
+ if(!reduced.matches){
+  let timer;
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{
+    document.body.classList.remove('light-3d-changing');
+    void document.body.offsetWidth;
+    document.body.classList.add('light-3d-changing');
+    clearTimeout(timer);timer=setTimeout(()=>document.body.classList.remove('light-3d-changing'),700);
+  }));
+ }
+})();
+</script>
+<script id="mobile-nav-v6">
+(()=>{
+ const button=document.querySelector('.menu'), nav=document.querySelector('#navigation');
+ if(!button||!nav)return;
+ // Existing menu code handles toggling. Add keyboard dismissal and screen-reader focus.
+ document.addEventListener('keydown',event=>{
+   if(event.key==='Escape'&&nav.classList.contains('open')){
+     nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='☰';button.focus();
+   }
+ });
+ document.addEventListener('pointerdown',event=>{
+   if(nav.classList.contains('open')&&!nav.contains(event.target)&&!button.contains(event.target)){
+     nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='☰';
+   }
+ });
+ const viewport=window.matchMedia('(min-width: 761px)');
+ const close=()=>{
+   if(viewport.matches&&nav.classList.contains('open')){
+     nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='☰';
+   }
+ };
+ viewport.addEventListener?.('change',close);
+})();
+</script>
+</body></html>
