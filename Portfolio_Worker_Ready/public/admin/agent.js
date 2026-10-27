@@ -40,6 +40,14 @@ run.addEventListener('click',async()=>{
  }catch(err){status.textContent=err.message||'The AI service is unavailable.'}
  finally{run.disabled=false}
 });
+$('agent-version')?.addEventListener('click',()=>{
+ const value=output.value.trim();
+ if(!value){status.textContent='Generate or write a draft first.';return}
+ const kind=generated?.kind||$('agent-kind').value;
+ const label=kind+' · '+($('agent-role').value||$('target').value||'general');
+ const saved=window.CareerStudioVersions?.saveDraft(kind,value,label);
+ status.textContent=saved?'Draft version archived in this browser. Open Draft history to review.':'Draft history is unavailable. Refresh and retry.';
+});
 apply.addEventListener('click',()=>{
  if(!generated||!output.value.trim())return;
  const target=taskTarget(generated.kind),field=$(target);
