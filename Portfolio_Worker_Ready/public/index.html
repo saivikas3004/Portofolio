@@ -239,10 +239,17 @@ img{height:auto}
  .marquee .skill-ticker-sep{padding:0 7px!important}
  .marquee .skill-ticker-track{animation-duration:48s!important}
 }
+/* The strip is a masked marquee, never a horizontally scrollable control. */
+.marquee,.marquee:focus-within{overflow:hidden!important;overflow-x:hidden!important;overflow-y:hidden!important;scrollbar-width:none!important;-ms-overflow-style:none}
+.marquee::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
 @media(prefers-reduced-motion:reduce){
- .marquee{overflow-x:auto!important}
+ .marquee{overflow:hidden!important;overflow-x:hidden!important}
  .marquee .skill-ticker-track{animation:none!important;transform:none!important;will-change:auto}
  .marquee .skill-ticker-clone{display:none!important}
+}
+/* For motion-enabled devices the track runs on its own, no swipes needed. */
+@media(prefers-reduced-motion:no-preference){
+ .marquee .skill-ticker-track{animation:skills-flow-v10 42s linear infinite!important;animation-play-state:running!important}
 }
 </style></head>
 <body><div aria-hidden="true" id="reading-progress-v4"></div>
