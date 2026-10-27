@@ -80,6 +80,9 @@ if(preset&&generate){
   if(!response.ok)throw Error(data.error||'Could not generate the application documents.');
   return data;
  };
+ async function generatePart(kind,profile,presetText){
+  return api({kind,profile,preset:presetText});
+ }
  generate.addEventListener('click',async()=>{
   if(!jd.value.trim()){packageStatus.textContent='Paste a job description before generating.';jd.focus();return}
   const profile=readProfile();
@@ -88,16 +91,50 @@ if(preset&&generate){
   profile.company=company.value.trim();
   profile.letterrole=profile.target;
   if(!profile.experience?.length){packageStatus.textContent='Add experience to your master profile before generating.';return}
-  generate.disabled=true;results.hidden=true;packageStatus.textContent='Generating your tailored résumé and cover letter…';
+  generate.disabled=true;
+  results.hidden=false;
+  const rules=preset.value.slice(0,3500);
+  let notes=[];
+  // Keep any successful document intact if the other call fails.
+  resume.value='';letter.value='';
+  $('package-notes').textContent='Review both drafts and verify all dates and claims before sending.';
+  try{localStorage.setItem(PRESET_KEY,rules)}catch{}
   try{
-   const data=await api({kind:'package',profile,preset:preset.value.slice(0,3500)});
-   resume.value=data.resume;letter.value=data.coverLetter;results.hidden=false;
-   $('package-notes').textContent=data.notes?'Review notes: '+data.notes:'Review both documents carefully before using them.';
-   packageStatus.textContent='Both drafts are ready. Edit them below, download individually or save them to Draft History.';
-   try{localStorage.setItem(PRESET_KEY,preset.value.slice(0,3500))}catch{}
-   results.scrollIntoView({behavior:'smooth',block:'start'});
-  }catch(err){packageStatus.textContent=err.message||'Generation failed.'}
-  finally{generate.disabled=false}
+   packageStatus.textContent='Step 1 of 2: generating your tailored résumé…';
+   try{
+    const data=await generatePart('package_resume',profile,rules);
+    resume.value=data.draft;
+    if(data.notes)notes.push('Résumé: '+data.notes);
+    packageStatus.textContent='Résumé ready. Step 2 of 2: generating your cover letter…';
+   }catch(error){
+    packageStatus.textContent='Résumé could not be generated: '+error.message+' Continuing with the cover letter…';
+    notes.push('Résumé failed: '+error.message);
+   }
+   try{
+    const data=await generatePart('package_letter',profile,rules);
+    letter.value=data.draft;
+    if(data.notes)notes.push('Cover letter: '+data.notes);
+   }catch(error){notes.push('Cover letter failed: '+error.message)}
+   $('package-notes').textContent=notes.length?'Generation notes: '+notes.join(' | '):'Both drafts are ready. Check every claim before using them.';
+   if(resume.value&&letter.value)packageStatus.textContent='Both documents generated. Review, edit and download below.';
+   else if(resume.value||letter.value)packageStatus.textContent='One document is ready. Your finished draft is preserved; use the retry button to generate the missing document.';
+   else packageStatus.textContent='Gemini could not generate either document. See details below and try again.';
+  }finally{generate.disabled=false}
+ });
+ $('package-retry').addEventListener('click',async()=>{
+  const missingResume=!resume.value.trim(),missingLetter=!letter.value.trim();
+  if(!missingResume&&!missingLetter){packageStatus.textContent='Both documents already exist. Download or edit them below.';return}
+  if(!jd.value.trim()){packageStatus.textContent='Paste a job description first.';return}
+  const profile=readProfile();profile.jobdesc=jd.value.trim();profile.target=role.value.trim()||'Advertised role';profile.company=company.value.trim();profile.letterrole=profile.target;
+  const target=missingResume?'package_resume':'package_letter';
+  const retry=$('package-retry');retry.disabled=true;packageStatus.textContent='Retrying '+(missingResume?'résumé':'cover letter')+'…';
+  try{
+   const data=await generatePart(target,profile,preset.value.slice(0,3500));
+   if(missingResume)resume.value=data.draft;else letter.value=data.draft;
+   packageStatus.textContent='Document generated. Review and download it below.';
+   $('package-notes').textContent=data.notes?'Review notes: '+data.notes:'Review all details before use.';
+  }catch(error){packageStatus.textContent='Retry failed: '+error.message}
+  finally{retry.disabled=false}
  });
  function fileSafeText(value){return String(value||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
  function downloadDoc(value,kind){
