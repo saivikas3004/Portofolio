@@ -283,6 +283,30 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #35
  .tool-panel>p,.contact>div p:not(.contact-email),
  .section .note{ text-align:left!important;hyphens:none }
 }
+</style><style id="experience-layout-repair-v13">
+/* Experience: clear two-column timeline, without stretched justification or narrow labels. */
+#experience .section-head .section-intro{ text-align:left!important;text-wrap:pretty;hyphens:none!important;word-spacing:normal!important;max-width:540px }
+#experience .experience-list{display:grid;gap:12px;border:0!important}
+#experience .exp{
+ display:grid!important;grid-template-columns:150px minmax(0,1fr)!important;
+ grid-template-areas:"date title" "date copy"!important;
+ column-gap:24px!important;row-gap:9px!important;
+ align-items:start!important;min-width:0!important;
+ padding:24px 28px!important;margin:0!important;
+ border:1px solid #dce5f6!important;border-radius:22px!important;
+ background:#ffffffec!important;overflow:visible!important
+}
+#experience .exp:hover{padding:24px 28px!important}
+#experience .exp .idx{grid-area:date!important;align-self:start!important;min-width:0;color:#5267c5!important;font-size:12px!important;line-height:1.5!important;letter-spacing:.065em!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important;white-space:normal!important}
+#experience .exp h3{grid-area:title!important;min-width:0!important;margin:0!important;font-size:clamp(18px,1.9vw,23px)!important;line-height:1.32!important;letter-spacing:-.035em!important}
+#experience .exp p{grid-area:copy!important;grid-column:auto!important;min-width:0!important;margin:0!important;text-align:left!important;text-justify:auto!important;text-wrap:pretty;word-spacing:normal!important;letter-spacing:normal!important;hyphens:none!important;overflow-wrap:normal!important;word-break:normal!important;line-height:1.68!important;font-size:15px!important;color:#5c6b85!important}
+@media(max-width:720px){
+ #experience .exp{grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"date" "title" "copy"!important;row-gap:9px!important;padding:21px 19px!important}
+ #experience .exp:hover{padding:21px 19px!important}
+ #experience .exp .idx{font-size:11px!important}
+ #experience .exp h3{font-size:19px!important}
+ #experience .exp p{font-size:14px!important;line-height:1.65!important}
+}
 </style></head>
 <body><div aria-hidden="true" id="reading-progress-v4"></div>
 <a class="skip" href="#main">Skip to content</a>
