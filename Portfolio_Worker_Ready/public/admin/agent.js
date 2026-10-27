@@ -59,4 +59,68 @@ apply.addEventListener('click',()=>{
  else $('save-profile')?.click();
  status.textContent='Applied to '+target+' and saved locally. Review your résumé/letter preview before downloading. This does NOT publish the public website.';
 });
+const DEFAULT_PRESET='Use Australian English and a professional, clear, confident tone. Make the résumé ATS-friendly with standard headings and concise accomplishment-oriented bullets that are strictly supported by my saved career history. Tailor keywords to the job description only where the evidence supports them. Preserve correct employers, titles and dates. Include relevant projects and education. Write a specific, natural cover letter without clichés, exaggerated claims or fabricated metrics. Avoid tables, emojis, graphics and generic filler in the résumé.';
+const PRESET_KEY='sv_application_preset_v1';
+const preset=$('package-rules'),jd=$('package-jd'),role=$('package-role'),company=$('package-company'),generate=$('package-generate'),results=$('package-results'),resume=$('package-resume'),letter=$('package-letter'),packageStatus=$('package-status');
+if(preset&&generate){
+ try{preset.value=localStorage.getItem(PRESET_KEY)||DEFAULT_PRESET}catch{preset.value=DEFAULT_PRESET}
+ const stored=readProfile();
+ role.value=stored.target||'';
+ company.value=stored.company||'';
+ jd.value=stored.jobdesc||'';
+ const savePreset=()=>{try{localStorage.setItem(PRESET_KEY,preset.value.slice(0,3500));packageStatus.textContent='Writing instructions saved in this browser.'}catch{packageStatus.textContent='Could not save the preset. Check browser storage permissions.'}};
+ $('package-save-rules').addEventListener('click',savePreset);
+ const api=async(body)=>{
+  const token=sessionStorage.getItem('sv_admin_tab_session_v1');
+  if(!token)throw Error('Session expired. Sign in to Career Studio again.');
+  const response=await fetch('/admin/api/agent',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify(body),credentials:'omit',cache:'no-store'});
+  if(!(response.headers.get('content-type')||'').includes('application/json'))throw Error('The drafting endpoint returned a web page. Check the Cloudflare Worker deployment.');
+  const data=await response.json();
+  if(response.status===401){sessionStorage.removeItem('sv_admin_tab_session_v1');throw Error('Your session has expired. Sign in again.')}
+  if(!response.ok)throw Error(data.error||'Could not generate the application documents.');
+  return data;
+ };
+ generate.addEventListener('click',async()=>{
+  if(!jd.value.trim()){packageStatus.textContent='Paste a job description before generating.';jd.focus();return}
+  const profile=readProfile();
+  profile.jobdesc=jd.value.trim();
+  profile.target=role.value.trim()||'Advertised role';
+  profile.company=company.value.trim();
+  profile.letterrole=profile.target;
+  if(!profile.experience?.length){packageStatus.textContent='Add experience to your master profile before generating.';return}
+  generate.disabled=true;results.hidden=true;packageStatus.textContent='Generating your tailored résumé and cover letter…';
+  try{
+   const data=await api({kind:'package',profile,preset:preset.value.slice(0,3500)});
+   resume.value=data.resume;letter.value=data.coverLetter;results.hidden=false;
+   $('package-notes').textContent=data.notes?'Review notes: '+data.notes:'Review both documents carefully before using them.';
+   packageStatus.textContent='Both drafts are ready. Edit them below, download individually or save them to Draft History.';
+   try{localStorage.setItem(PRESET_KEY,preset.value.slice(0,3500))}catch{}
+   results.scrollIntoView({behavior:'smooth',block:'start'});
+  }catch(err){packageStatus.textContent=err.message||'Generation failed.'}
+  finally{generate.disabled=false}
+ });
+ function fileSafeText(value){return String(value||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+ function downloadDoc(value,kind){
+  if(!value.trim()){packageStatus.textContent='Generate a document first.';return}
+  const text=value.split(/\n/).map(line=>'<p>'+fileSafeText(line||' ')+'</p>').join('');
+  const html='<html><head><meta charset="utf-8"><style>body{font:11pt/1.4 Calibri,Arial,sans-serif;color:#1c293e;margin:40pt}p{margin:4pt 0}</style></head><body>'+text+'</body></html>';
+  const blob=new Blob([html],{type:'application/msword'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;
+  a.download='Sai_Vikas_'+kind+'.doc';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200);
+ }
+ $('package-resume-download').addEventListener('click',()=>downloadDoc(resume.value,'Tailored_Resume'));
+ $('package-letter-download').addEventListener('click',()=>downloadDoc(letter.value,'Cover_Letter'));
+ for(const [button,field] of [['package-resume-copy',resume],['package-letter-copy',letter]]){
+  $(button).addEventListener('click',async()=>{if(!field.value.trim())return;try{await navigator.clipboard.writeText(field.value);packageStatus.textContent='Document copied to clipboard.'}catch{field.focus();field.select();packageStatus.textContent='Select and copy the highlighted text.'}});
+ }
+ $('package-apply').addEventListener('click',()=>{
+  if(!resume.value.trim()||!letter.value.trim())return;
+  const versions=window.CareerStudioVersions;if(!versions){packageStatus.textContent='Draft history is unavailable. Download the documents instead.';return}
+  const label=(role.value.trim()||'Application')+(company.value.trim()?' — '+company.value.trim():'');
+  const a=versions.saveDraft('resume',resume.value,label+' (complete résumé)');
+  const b=versions.saveDraft('letter',letter.value,label+' (cover letter)');
+  packageStatus.textContent=a&&b?'Both full documents saved to Draft History in this browser. Export a backup for safekeeping.':'Could not save both documents.';
+ });
+}
+
 })();
