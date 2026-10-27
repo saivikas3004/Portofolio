@@ -4,6 +4,39 @@
 <style>
 :root{font-family:Inter,system-ui,Arial,sans-serif;color:#edf3f2;background:#0d1423}*{box-sizing:border-box}body{margin:0}header{border-bottom:1px solid #33435a;padding:18px max(20px,calc((100vw - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px}h1{font-size:22px;margin:0}a{color:#b5f279}main{max-width:1160px;margin:30px auto;padding:0 20px}.muted{color:#a9b9ca;font-size:13px;line-height:1.6}.banner{border:1px solid #526277;background:#1b293c;padding:16px;border-radius:14px;margin-bottom:22px}.layout{display:grid;grid-template-columns:230px 1fr;gap:22px}.sidebar,.panel{background:#172336;border:1px solid #34465a;border-radius:16px;padding:20px}.sidebar button{display:block;width:100%;text-align:left;margin:5px 0;background:transparent;color:#d6e4ef;border:0;padding:13px;border-radius:9px;cursor:pointer;font:inherit}.sidebar button.active,.sidebar button:hover{background:#344a55;color:#c7ff84}.panel{min-height:480px}h2{margin:0 0 8px;font-size:24px}label{display:block;font-weight:650;font-size:13px;margin:18px 0 7px}input,textarea,select{width:100%;background:#0d1828;color:#fff;border:1px solid #54647a;border-radius:9px;padding:12px;font:inherit}textarea{min-height:110px;resize:vertical;line-height:1.5}button.action{border:0;background:#b8f379;color:#10211b;padding:11px 16px;border-radius:9px;font-weight:700;cursor:pointer;margin:8px 8px 8px 0}button.secondary{background:#33475e;color:#fff}button.danger{background:#6d3645;color:#fff}.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.item{border:1px solid #3d5267;padding:16px;border-radius:12px;margin:12px 0}.item h3{margin:0 0 8px;font-size:17px}.hide{display:none}.pill{display:inline-block;background:#30493b;color:#d1ffaf;padding:5px 10px;border-radius:30px;font-size:12px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.notice{background:#2b3144;border-left:3px solid #c7ff84;padding:12px;margin:12px 0;border-radius:5px}.preview{background:#fff;color:#202936;border-radius:10px;padding:26px;white-space:pre-wrap;font:14px/1.6 Arial,sans-serif;margin:16px 0}.preview h3{font-size:22px;margin:0 0 8px}.preview strong{color:#183b4b}#status{font-size:13px;color:#b8f379}@media(max-width:750px){.layout{grid-template-columns:1fr}.sidebar{display:flex;overflow-x:auto;padding:8px}.sidebar button{white-space:nowrap;width:auto}.two{grid-template-columns:1fr}}
 @media print{header,.sidebar,.banner,.actions,.muted,.controls,#status{display:none!important}body,main,.layout,.panel{background:white!important;color:black!important;display:block!important;margin:0!important;padding:0!important;border:0!important}.preview{margin:0!important;padding:0!important}.panel>*:not(.printable){display:none!important}}
+</style>
+<style id="admin-mobile-v2">
+html,body{max-width:100%;overflow-x:clip}
+header{padding-inline:clamp(14px,4vw,24px)}
+main{min-width:0}
+.layout,.panel,.sidebar{min-width:0}
+input,textarea,select{font-size:16px;max-width:100%}
+button,a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #a2b4fd;outline-offset:2px}
+@media(max-width:750px){
+ header{padding-block:14px}header h1{font-size:19px}
+ header .muted{font-size:11px}
+ main{margin:17px auto;padding-inline:12px}
+ .banner{padding:13px;font-size:13px;line-height:1.55;margin-bottom:13px}
+ .layout{display:block}
+ .sidebar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:5px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;border-radius:12px;padding:7px;margin-bottom:12px;scrollbar-width:thin}
+ .sidebar button{flex:0 0 auto;min-height:44px;scroll-snap-align:start;padding:11px 13px;font-size:13px}
+ .panel{padding:17px;min-height:unset}
+ .panel h2{font-size:22px}
+ .two{grid-template-columns:minmax(0,1fr)}
+ .row{gap:6px}
+ .action{min-height:44px}
+ .preview{padding:15px;font-size:12px;overflow-wrap:anywhere;overflow-x:auto}
+ .item{padding:12px}
+ textarea{min-height:110px}
+}
+@media(max-width:390px){
+ header h1{font-size:17px}
+ header a{font-size:12px}
+ .panel{padding:13px}
+ button.action{width:100%;margin:5px 0}
+}
+@media print{.sidebar{display:none!important}.panel{border:0!important;box-shadow:none!important}.preview{overflow:visible!important}}
 </style></head>
 <body><header><div><h1>Career Studio <span class="pill">Owner workspace</span></h1><div class="muted">Résumé and cover-letter editor</div></div><a href="/">← Public portfolio</a></header>
 <main><div class="banner"><strong>Security and saving:</strong> Admin access is password-protected by a Cloudflare Pages Function when configured. <strong>Set the ADMIN_PASSWORD secret before publishing.</strong> Drafts are saved only in this browser, not in a cloud account. Export a JSON backup regularly. AI tailoring requires the Gemini API setup later.</div>
