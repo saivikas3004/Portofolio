@@ -15,6 +15,11 @@ function renderJobs(){
   const h=document.createElement('h3');h.textContent=item.role+' · '+item.company;card.append(h);
   const details=document.createElement('p');details.className='muted';details.textContent=[item.stage,item.deadline?'Deadline: '+item.deadline:'',item.url].filter(Boolean).join(' · ');card.append(details);
   if(item.notes){const p=document.createElement('p');p.textContent=item.notes;card.append(p)}
+  const stageLabel=document.createElement('label');stageLabel.textContent='Update stage';stageLabel.className='muted';
+  const stageSelect=document.createElement('select');stageSelect.setAttribute('aria-label','Application stage for '+item.role+' at '+item.company);
+  for(const stage of ['Interested','Preparing application','Applied','Interviewing','Closed']){const option=document.createElement('option');option.value=stage;option.textContent=stage;option.selected=item.stage===stage;stageSelect.append(option)}
+  stageSelect.onchange=()=>{const all=safeRead(KEY);const current=all.find(x=>x.id===item.id);if(current){current.stage=stageSelect.value;save(KEY,all);setStatus('Application stage updated.');renderJobs()}};
+  card.append(stageLabel,stageSelect);
   const row=document.createElement('div');row.className='row';
   const use=document.createElement('button');use.className='action secondary';use.textContent='Tailor with AI';use.type='button';use.onclick=()=>{
    $('agent-role').value=item.role;$('agent-job').value=[item.notes,item.url?'Job link: '+item.url:''].filter(Boolean).join('\n');
