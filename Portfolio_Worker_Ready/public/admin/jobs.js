@@ -52,5 +52,6 @@ window.CareerStudioVersions={
  render:renderHistory
 };
 $('jobs-export').onclick=()=>{const data=JSON.stringify({opportunities:safeRead(KEY),draftVersions:safeRead(HISTORY)},null,2);const a=document.createElement('a');const url=URL.createObjectURL(new Blob([data],{type:'application/json'}));a.href=url;a.download='career_studio_jobs_and_versions.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+$('version-export').onclick=()=>$('jobs-export').click();
 renderJobs();renderHistory();
 })();
