@@ -111,6 +111,25 @@ button.danger{background:#713746;color:#ffe4e7;border:1px solid #9c566b}
 @media(max-width:390px){header h1{font-size:17px}.workspace-hero h2{font-size:31px}.workspace-hero{padding:23px 19px}.hero-action{font-size:11px;padding:12px}.panel{padding:16px}}
 @media print{.workspace-hero,.workspace-summary,.banner{display:none!important}.panel{background:#fff!important;box-shadow:none!important;border:0!important}.panel h2:after{display:none!important}}
 @media(prefers-reduced-motion:reduce){.workspace-tile,button.action{transition:none!important}}
+</style><style id="application-generator-v5">
+.application-generator{background:linear-gradient(145deg,#22395b,#1b2b48);border:1px solid #4c709d;border-radius:18px;padding:24px;margin:18px 0 26px}
+.application-generator .generator-eyebrow{font-size:10px;letter-spacing:.15em;color:#baf391;font-weight:800;margin-bottom:8px}
+.application-generator h3{font:700 clamp(19px,2.2vw,25px)/1.2 Outfit,system-ui,sans-serif;color:#f8fbff;letter-spacing:-.025em;margin:0 0 10px}
+.application-generator>p.muted{margin:0 0 20px}
+.application-generator label{margin:17px 0 7px}
+.application-generator textarea{line-height:1.65}
+.application-generator #package-jd{min-height:175px}
+.application-generator #package-rules{min-height:118px}
+.application-generator .generator-result-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:26px 0 9px}
+.application-generator .generator-result-header h3{margin:0}
+.application-generator .generator-result-header button{font-size:11px;padding:9px 12px;margin:0}
+.application-generator #package-resume,.application-generator #package-letter{font-size:13px;line-height:1.65;white-space:pre-wrap}
+.application-generator #package-results[hidden]{display:none!important}
+.application-generator #package-status{border-top:1px solid #58739950;padding-top:16px;margin-top:17px}
+.application-generator #package-notes:not(:empty){border-left:3px solid #d3edb6;padding-left:12px}
+.generator-divider{display:flex;gap:16px;align-items:center;margin:22px 0 18px;color:#94a8c9;font-size:10px;font-weight:800;letter-spacing:.12em}
+.generator-divider:before,.generator-divider:after{content:'';height:1px;background:#3c4f6d;flex:1}
+@media(max-width:750px){.application-generator{padding:19px 16px}.application-generator .generator-result-header{align-items:flex-start}.application-generator .generator-result-header .row{width:100%}.application-generator .generator-result-header button{flex:1}}
 </style></head>
 <body><header><div><h1>Career Studio <span class="pill">Owner workspace</span></h1><div class="muted">Résumé and cover-letter editor</div></div><div class="row"><a href="/">← Public portfolio</a><button type="button" class="action danger" id="sign-out">Sign out</button></div></header>
 <main>
@@ -128,6 +147,24 @@ button.danger{background:#713746;color:#ffe4e7;border:1px solid #9c566b}
 <button data-tab="agent"><span class="nav-icon">✦</span> AI Assistant</button><button data-tab="jobs"><span class="nav-icon">▤</span> Job Tracker</button><button data-tab="versions"><span class="nav-icon">◷</span> Draft History</button><button class="active" data-tab="profile"><span class="nav-icon">◉</span> Profile &amp; Skills</button><button data-tab="experience"><span class="nav-icon">▥</span> Experience</button><button data-tab="projects"><span class="nav-icon">◇</span> Projects</button><button data-tab="resume"><span class="nav-icon">▣</span> Résumé Builder</button><button data-tab="letter"><span class="nav-icon">✉</span> Cover Letter</button><button data-tab="settings"><span class="nav-icon">⚙</span> Backups &amp; Settings</button></nav>
 <div>
 <section class="panel hide" id="agent"><h2>✦ Gemini Career Agent</h2>
+<div class="application-generator">
+<div class="generator-eyebrow">ONE-CLICK APPLICATION KIT</div>
+<h3>One job description. Two tailored documents.</h3>
+<p class="muted">Paste a job advertisement, set your writing preferences once, and generate an editable résumé and cover letter based on your saved profile. Nothing is sent to an employer or published.</p>
+<div class="two"><div><label for="package-role">Job title</label><input id="package-role" placeholder="e.g. Data Analyst"></div><div><label for="package-company">Company (optional)</label><input id="package-company" placeholder="Organisation name"></div></div>
+<label for="package-jd">Job description</label><textarea id="package-jd" rows="9" placeholder="Paste the complete job description and key selection criteria here."></textarea>
+<label for="package-rules">Preset writing instructions (saved in this browser)</label><textarea id="package-rules" rows="5" maxlength="3500" placeholder="Your preferred style and formatting rules"></textarea>
+<div class="actions"><button type="button" class="action" id="package-generate">✦ Generate résumé + cover letter</button><button type="button" class="action secondary" id="package-save-rules">Save preset</button></div>
+<p class="muted" id="package-status" role="status" aria-live="polite">Add a job description and select Generate. Your existing saved profile provides the factual basis.</p>
+<div id="package-results" hidden>
+<div class="generator-result-header"><h3>Tailored résumé</h3><div class="row"><button type="button" class="action secondary" id="package-resume-copy">Copy</button><button type="button" class="action secondary" id="package-resume-download">Download Word-compatible file</button></div></div>
+<textarea id="package-resume" rows="16" aria-label="Editable tailored résumé"></textarea>
+<div class="generator-result-header"><h3>Tailored cover letter</h3><div class="row"><button type="button" class="action secondary" id="package-letter-copy">Copy</button><button type="button" class="action secondary" id="package-letter-download">Download Word-compatible file</button></div></div>
+<textarea id="package-letter" rows="12" aria-label="Editable cover letter"></textarea>
+<div class="actions"><button type="button" class="action" id="package-apply">Save both drafts into my editors</button></div>
+<p class="muted" id="package-notes"></p></div>
+</div>
+<div class="generator-divider"><span>OR GENERATE A SINGLE SECTION</span></div>
  <p class="muted">Generate résumé summaries, role-specific cover letters and skills using your master career profile. Gemini needs a Cloudflare encrypted secret named <code>GEMINI_API_KEY</code>. AI drafts are suggestions only: no automatic public publishing, applications or unverified claims.</p>
  <div class="two"><div><label for="agent-kind">What should the agent do?</label><select id="agent-kind"><option value="resume">Tailor résumé summary</option><option value="letter">Write cover letter</option><option value="summary">Improve professional summary</option><option value="skills">Prioritise verified skills</option></select></div><div><label for="agent-role">Target role (optional)</label><input id="agent-role" placeholder="e.g. Data Analyst"></div></div>
  <label for="agent-job">Job description (optional)</label><textarea id="agent-job" placeholder="Paste a job description to make the AI draft more relevant. Do not paste passwords or sensitive information."></textarea>
