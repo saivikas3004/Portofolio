@@ -33,7 +33,7 @@ run.addEventListener('click',async()=>{
  status.textContent='Generating a draft with Gemini…';
  try{
   const response=await fetch('/admin/api/agent',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Authorization':'Bearer '+(sessionStorage.getItem('sv_admin_tab_session_v1')||'')},body:JSON.stringify({kind,profile})});
-  const data=await response.json();
+  const responseType=response.headers.get('content-type')||'';if(!responseType.includes('application/json'))throw new Error('AI endpoint returned an HTML page. Check the Cloudflare Worker deployment and admin API routes.');const data=await response.json();
   if(response.status===401){sessionStorage.removeItem('sv_admin_tab_session_v1');throw new Error('Session expired. Sign in again at /admin/.')} if(!response.ok)throw new Error(data.error||'AI request failed');
   output.value=data.draft;generated={kind};apply.disabled=false;
   status.textContent='Draft ready. Review the content before applying it.'+(data.notes?' Notes: '+data.notes:'');
