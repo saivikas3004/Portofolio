@@ -225,18 +225,25 @@ img{height:auto}
 .portfolio-disclosure summary:focus-visible{outline:3px solid #6479d1;outline-offset:-3px}
 @media(max-width:850px){.about{grid-template-columns:1fr!important}.hero-inner{min-height:0!important}.hero-art{min-height:190px!important}.orbit{width:190px!important}}
 @media(max-width:760px){.section{padding-top:40px!important;padding-bottom:40px!important}.hero-inner{padding-top:45px!important;padding-bottom:42px!important}.hero h1{font-size:clamp(38px,10vw,56px)!important}.section h2{font-size:clamp(28px,8vw,40px)!important}.section-head{margin-bottom:17px!important}.about-card{min-height:130px!important}.hero-art{min-height:165px!important}.orbit{width:160px!important}.portfolio-disclosure summary{padding:15px;font-size:13px}.portfolio-disclosure .disclosure-body{padding:11px}.contact{padding:42px 0!important}}
-</style><style id="skills-ticker-v9">
-/* Smooth, seamless skills ticker: mobile friendly, reduced-motion accessible. */
-.marquee{overflow:hidden!important;padding:12px 0!important;border-block:1px solid #dbe5f8!important;background:#edf3ff!important;position:relative}
-.skill-ticker-track{display:flex;align-items:center;width:max-content;min-width:100%;animation:skill-ticker-scroll 55s linear infinite;will-change:transform}
-.skill-ticker-group{display:flex;flex:none;align-items:center;width:max-content;white-space:nowrap}
-.skill-ticker-clone{display:flex;flex:none;align-items:center}
-.skill-ticker-item{display:inline-block;color:#4d619c;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;padding:0 14px}
-.skill-ticker-sep{color:#a18bd9;font-size:13px;padding:0 9px;flex:none}
-.marquee:hover .skill-ticker-track,.marquee:focus-within .skill-ticker-track{animation-play-state:paused}
-@keyframes skill-ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:600px){.marquee{padding:11px 0!important}.skill-ticker-item{font-size:11px;letter-spacing:.08em;padding:0 10px}.skill-ticker-sep{padding:0 6px}.skill-ticker-track{animation-duration:65s}}
-@media(prefers-reduced-motion:reduce){.marquee{overflow-x:auto!important;scrollbar-width:thin}.skill-ticker-track{animation:none!important;transform:none!important;will-change:auto}.skill-ticker-clone{display:none!important}}
+</style><style id="skills-ticker-v10">
+/* High-contrast seamless skills ticker; overrides legacy .marquee span styling. */
+.marquee{background:#eaf0ff!important;border-block:1px solid #c6d4ec!important;padding:13px 0!important;overflow:hidden!important;position:relative;isolation:isolate}
+.marquee .skill-ticker-track{display:flex!important;align-items:center;gap:0;width:max-content;min-width:0;white-space:nowrap;animation:skills-flow-v10 42s linear infinite!important;animation-play-state:running!important;will-change:transform}
+.marquee .skill-ticker-group,.marquee .skill-ticker-clone{display:flex;flex:0 0 auto;align-items:center;width:max-content;white-space:nowrap}
+.marquee .skill-ticker-item{display:inline-flex;align-items:center;flex:0 0 auto;white-space:nowrap;padding:0 17px!important;margin:0!important;color:#223b72!important;-webkit-text-fill-color:#223b72!important;font-size:14px!important;font-weight:800!important;line-height:1.6!important;letter-spacing:.055em!important;text-transform:uppercase;text-shadow:none!important;opacity:1!important;visibility:visible!important}
+.marquee .skill-ticker-sep{display:inline-flex;flex:0 0 auto;padding:0 9px!important;color:#7651b9!important;-webkit-text-fill-color:#7651b9!important;font-size:15px!important;font-weight:900!important;opacity:1!important}
+@keyframes skills-flow-v10{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+@media(max-width:600px){
+ .marquee{padding:12px 0!important}
+ .marquee .skill-ticker-item{font-size:12px!important;letter-spacing:.045em!important;padding:0 12px!important}
+ .marquee .skill-ticker-sep{padding:0 7px!important}
+ .marquee .skill-ticker-track{animation-duration:48s!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .marquee{overflow-x:auto!important}
+ .marquee .skill-ticker-track{animation:none!important;transform:none!important;will-change:auto}
+ .marquee .skill-ticker-clone{display:none!important}
+}
 </style></head>
 <body><div aria-hidden="true" id="reading-progress-v4"></div>
 <a class="skip" href="#main">Skip to content</a>
