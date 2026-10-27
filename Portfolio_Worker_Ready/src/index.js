@@ -1,4 +1,5 @@
 import { onRequestPost as geminiPost } from './gemini.js';
+import { generateAdminDraft } from './admin-agent.js';
 
 const enc = new TextEncoder();
 const json = (data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});
@@ -21,6 +22,10 @@ export default {
     }
     const [a,b]=await Promise.all([safeEqual(user,env.ADMIN_USERNAME||'admin'),safeEqual(pass,env.ADMIN_PASSWORD)]);
     if(!a||!b)return reject();
+    if(url.pathname==='/admin/api/agent'){
+      if(request.method!=='POST')return json({error:'Use POST.'},405);
+      return generateAdminDraft(request,env);
+    }
     const resp=await env.ASSETS.fetch(request);const headers=new Headers(resp.headers);
     headers.set('Cache-Control','private, no-store');headers.set('X-Robots-Tag','noindex, nofollow');
     return new Response(resp.body,{status:resp.status,statusText:resp.statusText,headers});
