@@ -32,9 +32,9 @@ run.addEventListener('click',async()=>{
  output.value='';generated=null;apply.disabled=true;run.disabled=true;
  status.textContent='Generating a draft with Gemini…';
  try{
-  const response=await fetch('/admin/api/agent',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind,profile})});
+  const response=await fetch('/admin/api/agent',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','Authorization':'Bearer '+(sessionStorage.getItem('sv_admin_tab_session_v1')||'')},body:JSON.stringify({kind,profile})});
   const data=await response.json();
-  if(!response.ok)throw new Error(data.error||'AI request failed');
+  if(response.status===401){sessionStorage.removeItem('sv_admin_tab_session_v1');throw new Error('Session expired. Sign in again at /admin/.')} if(!response.ok)throw new Error(data.error||'AI request failed');
   output.value=data.draft;generated={kind};apply.disabled=false;
   status.textContent='Draft ready. Review the content before applying it.'+(data.notes?' Notes: '+data.notes:'');
  }catch(err){status.textContent=err.message||'The AI service is unavailable.'}
