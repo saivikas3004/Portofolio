@@ -13,8 +13,9 @@ const paragraph=(value,kind='body')=>{
  const text=kind==='bullet'?value.replace(/^[•●▪\-–*]\s*/,''):value;
  const formatting=kind==='name'?'<w:b/><w:sz w:val="23"/>':kind==='section'?'<w:b/><w:sz w:val="12"/>':kind==='job'?'<w:b/>':kind==='closing'?'<w:b/>':'';
  const align=kind==='body'||kind==='bullet'?'<w:jc w:val="both"/>':'';
+ const lineSpacing=kind==='name'||kind==='contact'?'<w:spacing w:line="240" w:lineRule="auto"/>':'<w:spacing w:line="360" w:lineRule="auto"/>';
  const runs=(kind==='bullet'?'<w:r><w:t xml:space="preserve">•  </w:t></w:r>':'')+'<w:r><w:rPr>'+formatting+'</w:rPr><w:t xml:space="preserve">'+x(text)+'</w:t></w:r>';
- return '<w:p><w:pPr>'+props+align+'</w:pPr>'+runs+'</w:p>';
+ return '<w:p><w:pPr>'+props+align+lineSpacing+'</w:pPr>'+runs+'</w:p>';
 };
 const xml=(type,text,meta={})=>{
  const lines=normalize(text);
