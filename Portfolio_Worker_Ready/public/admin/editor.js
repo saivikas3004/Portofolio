@@ -2,6 +2,32 @@
 const KEY='sv_career_studio_v1';
 const defaults={name:'Sai Vikas Malladi',headline:'Database Administrator | Data & IT Professional',email:'saivikasmalladi@gmail.com',location:'Adelaide, South Australia',summary:'Database Administrator and Master of Data Science graduate with experience in South Australian Government information management, data quality, database applications and university IT support. Skilled in Excel, data validation, records governance, Python, SQL and reporting.',skills:'Data cleansing, data validation, information governance, records management, Microsoft Excel, CRM, database application support, SQL, Python, pandas, Power BI, Tableau, ETL, reporting, stakeholder communication',education:'Master of Data Science — University of South Australia (February 2022 – March 2024)\nBachelor of Computer Science and Technology — Sathyabama Institute of Science and Technology (July 2016 – May 2020)\nProfessional Year Program — Performance Education (August 2025 – August 2026)',experience:[{title:'Database Administrator',organisation:'Department for Education SA — Instrumental Music, Klemzig',dates:'April 2025 – Present',details:'Maintain student-records database workflows, perform manual data validation and cleansing, investigate data inconsistencies, and support application troubleshooting and information governance.'},{title:'Public Administration and Information Officer',organisation:'Department for Education SA',dates:'August 2024 – March 2025',details:'Verified sensitive records and managed information across CRM, licensing and compliance-related workflows; worked with stakeholders to support accurate records and reporting.'},{title:'IT Support Consultant',organisation:'University of South Australia',dates:'March 2022 – July 2024',details:'Supported CRM and document management systems, investigated user issues, maintained technical procedures and worked with support teams.'},{title:'Store Manager',organisation:'Oporto',dates:'May 2022 – April 2025',details:'Managed daily restaurant operations, workforce rostering, staffing, pay cycles, sales monitoring and service issues.'}],projects:[{title:'Student Records Analysis',details:'Excel data validation and cleansing of approximately 10,000 instrumental music student records; Power BI reporting on data quality.'},{title:'Supermarket Sales Optimisation Analysis',details:'Cleaned and analysed approximately 100,000 transactions using Python, pandas and Excel, exploring sales patterns, customer segmentation and forecasting.'},{title:'Weather Forecasting and Data Pipelines',details:'Python, ARIMA, Random Forest and Power BI; weather data preparation, model evaluation and visualisation.'},{title:'Reddit Sentiment and Mental Health Language Analysis',details:'Python, NLTK, scikit-learn and Tableau; research-focused social media language analysis.'},{title:'Electricity Consumption Forecasting',details:'MATLAB, Python and ANFIS; academic forecasting research using electricity and weather data.'}],target:'Data Analyst',jobdesc:'',tailored:'',company:'',letterrole:'Data Analyst',letterbody:''}
 let data;try{data={...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{data=structuredClone(defaults)}
+// One-time migration of known obsolete defaults and job entries. Preserve user-authored drafts.
+const PROFILE_VERSION='sv_career_studio_profile_20261028_v2';
+try{
+ if(!localStorage.getItem(PROFILE_VERSION)){
+  const oldExperience=Array.isArray(data.experience)?data.experience:[];
+  data.experience=oldExperience.filter(x=>!/^(Freelance Data Analyst|Data Analyst - Freelance)$/i.test(String(x.title||'').trim()));
+  if(!data.experience.some(x=>/Public Administration and Information Officer/i.test(x.title||''))){
+   const government=structuredClone(defaults.experience.find(x=>x.title==='Public Administration and Information Officer'));
+   const index=data.experience.findIndex(x=>/Database Administrator/i.test(x.title||''));
+   data.experience.splice(index<0?0:index+1,0,government);
+  }
+  for(const job of data.experience){
+   if(/Database Administrator/i.test(job.title||'')&&/^(?:Current|2025\s*[-–]\s*Present|2025\s*[-–]\s*Current)$/i.test(String(job.dates||'').trim()))job.dates='April 2025 – Present';
+  }
+  if(typeof data.education==='string'&&!data.education.includes('Professional Year Program')){
+   data.education=data.education.trim()+'\nProfessional Year Program — Performance Education (August 2025 – August 2026)';
+  }
+  if(!Array.isArray(data.projects))data.projects=[];
+  for(const project of defaults.projects.filter(x=>/^(Student Records Analysis|Supermarket Sales Optimisation Analysis)$/.test(x.title))){
+   if(!data.projects.some(x=>String(x.title||'').toLowerCase()===project.title.toLowerCase()))data.projects.unshift(structuredClone(project));
+  }
+  if(typeof data.summary==='string'&&data.summary.includes('restaurant operations.')&&data.summary.includes('electronic records'))data.summary=defaults.summary;
+  localStorage.setItem(KEY,JSON.stringify(data));
+  localStorage.setItem(PROFILE_VERSION,'migrated');
+ }
+}catch{}
 const $=id=>document.getElementById(id), fields=['name','headline','email','location','summary','skills','education','target','jobdesc','tailored','company','letterrole','letterbody'];
 const status=t=>{$('status').textContent=t};
 function persist(){localStorage.setItem(KEY,JSON.stringify(data));status('Saved in this browser. Export a backup for safekeeping.')}
