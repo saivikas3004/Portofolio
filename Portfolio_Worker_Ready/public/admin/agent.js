@@ -59,7 +59,7 @@ apply.addEventListener('click',()=>{
  else $('save-profile')?.click();
  status.textContent='Applied to '+target+' and saved locally. Review your résumé/letter preview before downloading. This does NOT publish the public website.';
 });
-const DEFAULT_PRESET='Use Australian English and a professional, clear, confident tone. Make the résumé ATS-friendly with standard headings and concise accomplishment-oriented bullets that are strictly supported by my saved career history. Tailor keywords to the job description only where the evidence supports them. Preserve correct employers, titles and dates. Include relevant projects and education. Write a specific, natural cover letter without clichés, exaggerated claims or fabricated metrics. Avoid tables, emojis, graphics and generic filler in the résumé.';
+const DEFAULT_PRESET='Use Australian English and a professional, clear, confident tone. Make the résumé ATS-friendly with standard headings and concise accomplishment-oriented bullets that are strictly supported by my saved career history. Tailor keywords to the job description only where the evidence supports them. Preserve correct employers, titles and dates. Include relevant projects and education. Write a specific, natural cover letter without clichés, exaggerated claims or fabricated metrics. Keep the uploaded résumé section order: SKILLS (Data Management, Technical Proficiency, Stakeholder and Communication Skills), EDUCATION & QUALIFICATIONS, WORK EXPERIENCE, PROJECTS, VOLUNTEER & COMMUNITY INVOLVEMENT, REFERENCES. Include only substantiated entries, using standard section headings and bullet points. The uploaded cover letter layout uses centered name/contact, date, hiring manager/address, Dear Hiring Manager greeting, evidence-led paragraphs and Yours sincerely sign-off. Avoid tables, emojis, graphics and generic filler.';
 const PRESET_KEY='sv_application_preset_v1';
 const preset=$('package-rules'),jd=$('package-jd'),role=$('package-role'),company=$('package-company'),generate=$('package-generate'),results=$('package-results'),resume=$('package-resume'),letter=$('package-letter'),packageStatus=$('package-status');
 if(preset&&generate){
@@ -145,8 +145,8 @@ if(preset&&generate){
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;
   a.download='Sai_Vikas_'+kind+'.doc';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200);
  }
- $('package-resume-download').addEventListener('click',()=>downloadDoc(resume.value,'Tailored_Resume'));
- $('package-letter-download').addEventListener('click',()=>downloadDoc(letter.value,'Cover_Letter'));
+ $('package-resume-download').addEventListener('click',()=>{try{window.CareerStudioTemplates.download('resume',resume.value,{name:($('name')?.value||'Sai Vikas Malladi')})}catch(err){packageStatus.textContent=err.message}});
+ $('package-letter-download').addEventListener('click',()=>{try{window.CareerStudioTemplates.download('letter',letter.value,{name:($('name')?.value||'Sai Vikas Malladi')})}catch(err){packageStatus.textContent=err.message}});
  for(const [button,field] of [['package-resume-copy',resume],['package-letter-copy',letter]]){
   $(button).addEventListener('click',async()=>{if(!field.value.trim())return;try{await navigator.clipboard.writeText(field.value);packageStatus.textContent='Document copied to clipboard.'}catch{field.focus();field.select();packageStatus.textContent='Select and copy the highlighted text.'}});
  }
