@@ -62,9 +62,20 @@ apply.addEventListener('click',()=>{
 const DEFAULT_PRESET='Use Australian English and a professional, clear, confident tone. Make the résumé ATS-friendly with standard headings and concise accomplishment-oriented bullets that are strictly supported by my saved career history. Tailor keywords to the job description only where the evidence supports them. Preserve correct employers, titles and dates. Include relevant projects and education. Write a specific, natural cover letter without clichés, exaggerated claims or fabricated metrics. Keep the uploaded résumé section order: SKILLS (Data Management, Technical Proficiency, Stakeholder and Communication Skills), EDUCATION & QUALIFICATIONS, WORK EXPERIENCE, PROJECTS, VOLUNTEER & COMMUNITY INVOLVEMENT, REFERENCES. Include only substantiated entries, using standard section headings and bullet points. The uploaded cover letter layout uses centered name/contact, date, hiring manager/address, Dear Hiring Manager greeting, evidence-led paragraphs and Yours sincerely sign-off. Avoid tables, emojis, graphics and generic filler.';
 const PRESET_KEY='sv_application_preset_v1';
 const GUIDE_KEY='sv_resume_writing_guide_v1';
+const OFFICIAL_GUIDE_SUMMARY=`Performance Education résumé-writing guide (applies to every résumé):
+Professional Profile: 2-3 targeted, factual sentences covering role sought, credible technical strengths and evidenced soft skills.
+Key Skills Summary: list only confidently demonstrable relevant skills, arranged by technical category.
+Educational Background: reverse chronological order (Professional Year, Australian Master's, international Bachelor's); show institution and verified dates; include only evidenced academic distinctions.
+Certifications: separate confirmed qualifications and providers, distinguishing expired accreditations.
+University Project: choose 1-2 most relevant Australian university projects, when supported. Provide Objective beginning "To", Tools, Duties and Result. Never label independent projects as university work.
+Relevant Employment Experience: newest first; specific action-led bullets, present tense for current work, past for completed work; aim for 5-7 only where supported; never invent statistics.
+Other Employment Experience: separate unrelated employment with transferable duties, newest first.
+Personal Attributes: 3-4 supported strengths with concrete evidence.
+References: Available upon request.
+Aim for two pages, allow three for substantial relevant experience. Keep Australian English, punctuation, heading capitalisation, dates and formatting consistent. No plagiarism, exaggeration, unverified tools or GPA. Justify Word body paragraphs and bullet text.`;
 const guide=$('package-guide'),preset=$('package-rules'),jd=$('package-jd'),role=$('package-role'),company=$('package-company'),generate=$('package-generate'),results=$('package-results'),resume=$('package-resume'),letter=$('package-letter'),packageStatus=$('package-status');
 if(preset&&generate){
- try{preset.value=localStorage.getItem(PRESET_KEY)||DEFAULT_PRESET;guide.value=localStorage.getItem(GUIDE_KEY)||''}catch{preset.value=DEFAULT_PRESET;guide.value=''}
+ try{preset.value=localStorage.getItem(PRESET_KEY)||DEFAULT_PRESET;guide.value=localStorage.getItem(GUIDE_KEY)||OFFICIAL_GUIDE_SUMMARY}catch{preset.value=DEFAULT_PRESET;guide.value=OFFICIAL_GUIDE_SUMMARY}
  const stored=readProfile();
  role.value=stored.target||'';
  company.value=stored.company||'';
