@@ -8,7 +8,7 @@ Skills: Microsoft Excel (pivot tables, lookup functions, filtering and validatio
 Projects highlighted in the most recent résumé: Student Records Analysis (Excel validation/cleansing of approximately 10,000 records; Power BI reporting) and Supermarket Sales Optimisation Analysis (Python/pandas/Excel analysis of approximately 100,000 transactions). Additional academic and independent portfolio projects cover retail analytics, weather forecasting and data pipelines, Reddit sentiment and mental-health-related language research (not clinical), and electricity consumption forecasting using ANFIS (public research). Do not invent verified commercial impact or model accuracy.
 Community: Uni Mentor, University of South Australia (March 2022–March 2024); Volunteer, Adelaide Fringe Festival (January–April 2024).
 Credentials documented separately on the portfolio: Harvard CS50x (2020) and WorldQuant University Applied Data Science Module with honours (2020).
-Do not present the freelance data analyst role from older CV versions as current résumé employment. Do not claim formal systems analyst experience or unverified metrics.
+Use only employment listed in the current career profile; avoid importing claims from archived drafts or undocumented roles. Do not state unverifiable metrics.
 Contact: saivikasmalladi@gmail.com, https://www.linkedin.com/in/saivikasmalladi/ . Portfolio: https://saivikasmalladi.com/ .
 Never ask for sensitive details from visitors. If asked to judge suitability, discuss evidence and gaps rather than claim hiring eligibility.`;
 const json=(obj,status=200,headers={})=>new Response(JSON.stringify(obj),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...headers}});
