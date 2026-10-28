@@ -38,7 +38,7 @@ export default {
     h.set('Content-Type','text/html; charset=utf-8');
     return new Response(resp.body,{status:resp.status,statusText:resp.statusText,headers:h});
    }
-   if(/^\/admin\/(?:editor|jobs|agent)\.js$/.test(path)&&request.method==='GET'){
+   if(/^\/admin\/(?:editor|jobs|agent|templates)\.js$/.test(path)&&request.method==='GET'){
     const resp=await env.ASSETS.fetch(request),h=new Headers(resp.headers);
     for(const [k,v] of Object.entries(headers))h.set(k,v);
     return new Response(resp.body,{status:resp.status,statusText:resp.statusText,headers:h});
