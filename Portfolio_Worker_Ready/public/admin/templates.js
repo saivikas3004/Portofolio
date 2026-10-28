@@ -32,7 +32,7 @@ const xml=(type,text,meta={})=>{
    if(subheadings.has(upper)){body.push(paragraph(line,'job'));continue}
    if(/^[•●▪\-–*]\s+/.test(line)){body.push(paragraph(line,'bullet'));continue}
    if(/^(?:professional summary|profile|summary)\s*:?\s*$/i.test(line))continue;
-   if(/^(?:master of|bachelor of|professional year|database administrator|public administration|it support consultant|store manager|freelance data analyst|student records analysis|supermarket sales)/i.test(line)&&section){body.push(paragraph(line,'job'));continue}
+   if(/^(?:master of|bachelor of|professional year|database administrator|public administration|it support consultant|store manager|student records analysis|supermarket sales)/i.test(line)&&section){body.push(paragraph(line,'job'));continue}
    if(!hasHeader&&/^(?:experience|skills|education|projects)$/i.test(line))continue;
    body.push(paragraph(line,'body'));
   }
