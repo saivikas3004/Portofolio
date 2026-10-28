@@ -1,5 +1,5 @@
 %PDF-1.4
-%ASCII
+%Resume-ASCII
 1 0 obj
 << /Type /Catalog /Pages 2 0 R >>
 endobj
@@ -16,116 +16,122 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 5602 >>
+<< /Length 6616 >>
 stream
-0.11 0.16 0.24 rg BT /F2 18 Tf 1 0 0 1 51 795.0 Tm (SAI VIKAS MALLADI) Tj ET
-0.11 0.16 0.24 rg BT /F1 8.2 Tf 1 0 0 1 51 766.5 Tm (Adelaide, SA | 0416 130 046 | saivikasmalladi@gmail.com | linkedin.com/in/saivikasmalladi) Tj ET
-0.74 0.81 0.89 RG 0.7 w 51 733.486 m 545 733.486 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 737.5 Tm (PROFESSIONAL SUMMARY) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 720.8 Tm (Database Administrator and Master of Data Science graduate with experience in South Australian) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 707.1 Tm (government administration, data quality, information governance and technical support. Skilled in) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 693.4 Tm (validating and cleansing structured records, supporting CRM and database-related applications, and) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 679.7 Tm (documenting issues and workflows in compliance-focused environments. Brings additional experience in) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 666.1 Tm (business operations and practical data analysis using Excel, SQL, Python and Power BI.) Tj ET
-0.74 0.81 0.89 RG 0.7 w 51 637.4019999999997 m 545 637.4019999999997 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 641.4 Tm (CORE SKILLS) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 624.7 Tm (Data and information management: Data cleansing and standardisation; data validation; records) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 611.0 Tm (accuracy; document management; archiving and information governance.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 594.3 Tm (Technical and analytical: Microsoft Excel \(pivot tables, lookups, filtering and data validation\);) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 580.7 Tm (SQL; Python; pandas; Power BI; Tableau; ETL and reporting.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 564.0 Tm (Operational and stakeholder: Application troubleshooting; CRM support; process documentation;) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 550.3 Tm (stakeholder communication; workforce and service coordination.) Tj ET
-0.74 0.81 0.89 RG 0.7 w 51 521.6469999999994 m 545 521.6469999999994 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 525.6 Tm (PROFESSIONAL EXPERIENCE) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 503.9 Tm (Database Administrator | Department for Education, SA | Apr 2025 - Present) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 490.1 Tm (- Support student-records database workflows, including manual data review, validation and cleansing) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 476.7 Tm (to maintain accurate, consistent information.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 462.3 Tm (- Investigate discrepancies and support standardisation of records for government reporting and) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 449.0 Tm (information-quality requirements.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 434.6 Tm (- Assist with application issues, controlled records access, archiving and audit-aware) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 421.2 Tm (information-handling processes.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 401.8 Tm (Public Administration and Information Officer | Department for Education, SA | Aug 2024 - Mar 2025) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 388.0 Tm (- Reviewed and maintained sensitive information across CRM, licensing and compliance-related) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 374.6 Tm (administrative workflows.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 360.3 Tm (- Verified supporting records and documentation, paying close attention to completeness,) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 346.9 Tm (confidentiality and procedural requirements.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 332.5 Tm (- Coordinated with internal stakeholders to resolve information issues and support operational) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 319.1 Tm (reporting.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 299.8 Tm (IT Support Consultant | University of South Australia | Mar 2022 - Jul 2024) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 285.9 Tm (- Provided user support for CRM and document-management applications, investigating reported software) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 272.6 Tm (and hardware problems.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 258.2 Tm (- Prepared and maintained technical guidance and repeatable support procedures.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 243.8 Tm (- Worked with colleagues and service users to clarify incidents, coordinate troubleshooting and) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 230.4 Tm (improve support consistency.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 211.1 Tm (Store Manager | Oporto | May 2022 - Apr 2025) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 197.2 Tm (- Coordinated daily service operations, staff rostering, workforce allocation and payroll-cycle) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 183.9 Tm (activities.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 169.5 Tm (- Reviewed sales and operating information to support staffing, stock and service decisions.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 155.1 Tm (- Trained and supported team members while maintaining service standards and addressing operational) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 141.7 Tm (issues.) Tj ET
-0.38 0.43 0.51 rg BT /F1 8 Tf 1 0 0 1 507 32 Tm (Page 1 of 2) Tj ET
+0.12 0.18 0.30 rg BT /F2 21 Tf 1 0 0 1 215.86 790.00 Tm (Sai Vikas Malladi) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.6 Tf 1 0 0 1 183.68 762.00 Tm (Adelaide, SA  |  0416 130 046  |  saivikasmalladi@gmail.com) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.6 Tf 1 0 0 1 237.86 749.00 Tm (linkedin.com/in/saivikasmalladi) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 716.00 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 710 m 546 710 l S
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 696.00 Tm (Master of Data Science graduate and Database Administrator with experience in South Australian Government) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 682.80 Tm (information management, data quality, records administration and application support. Skilled in reviewing and) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 669.60 Tm (cleansing structured records, documenting issues and supporting consistent workflows in compliance-focused) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 656.40 Tm (environments. Additional strengths include Microsoft Excel, SQL, Python, Power BI, technical troubleshooting and) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 643.20 Tm (operational leadership.) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 616.00 Tm (CORE SKILLS) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 609.9999999999998 m 546 609.9999999999998 l S
+0.12 0.18 0.30 rg BT /F1 9.1 Tf 1 0 0 1 49.00 596.00 Tm (Data & information: Data validation, cleansing and standardisation; records governance; electronic records; CRM and) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.1 Tf 1 0 0 1 49.00 583.40 Tm (document-management workflows) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.1 Tf 1 0 0 1 49.00 567.80 Tm (Technology & analysis: Excel \(pivot tables, lookups, filtering, data validation\); Python; SQL; pandas; Power BI; Tableau;) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.1 Tf 1 0 0 1 49.00 555.20 Tm (ETL and reporting) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.1 Tf 1 0 0 1 49.00 539.60 Tm (Operations & support: Application troubleshooting, procedural documentation, stakeholder communication, workforce) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.1 Tf 1 0 0 1 49.00 527.00 Tm (and service coordination) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 500.40 Tm (EDUCATION & QUALIFICATIONS) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 494.39999999999964 m 546 494.39999999999964 l S
+0.12 0.18 0.30 rg BT /F2 9.25 Tf 1 0 0 1 49.00 480.40 Tm (Master of Data Science | University of South Australia) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 524.92 480.40 Tm (2024) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.25 Tf 1 0 0 1 49.00 465.00 Tm (Bachelor of Computer Science and Technology | Sathyabama Institute of Science and Technology) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 524.92 465.00 Tm (2020) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.25 Tf 1 0 0 1 49.00 449.60 Tm (Professional Year Program | Performance Education) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 462.45 449.60 Tm (Aug 2025 - Aug 2026) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 423.20 Tm (PROFESSIONAL EXPERIENCE) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 417.1999999999997 m 546 417.1999999999997 l S
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 398.20 Tm (Database Administrator | Department for Education, SA) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 468.48 398.20 Tm (Apr 2025 - Present) Tj ET
+0.17 0.32 0.51 rg 61 387.5999999999997 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 385.20 Tm (Maintain student-records database workflows, reviewing and cleansing information to support accuracy,) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 372.40 Tm (consistency and reliable administration.) Tj ET
+0.17 0.32 0.51 rg 61 358.99999999999966 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 356.60 Tm (Investigate data discrepancies, support standardisation and assist with application issues, records lifecycle) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 343.80 Tm (procedures and audit-aware information handling.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 323.00 Tm (Public Administration and Information Officer | Department for Education, SA) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 461.00 323.00 Tm (Aug 2024 - Mar 2025) Tj ET
+0.17 0.32 0.51 rg 61 312.39999999999964 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 310.00 Tm (Maintained and verified sensitive information in CRM, licensing and compliance-related administrative) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 297.20 Tm (workflows.) Tj ET
+0.17 0.32 0.51 rg 61 283.7999999999996 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 281.40 Tm (Reviewed supporting records for completeness and confidentiality, coordinating with stakeholders to resolve) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 268.60 Tm (information issues.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 247.80 Tm (IT Support Consultant | University of South Australia) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 464.06 247.80 Tm (Mar 2022 - Jul 2024) Tj ET
+0.17 0.32 0.51 rg 61 237.19999999999962 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 234.80 Tm (Supported CRM and document-management application users, investigating software, hardware and workflow) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 222.00 Tm (issues.) Tj ET
+0.17 0.32 0.51 rg 61 208.5999999999996 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 206.20 Tm (Maintained technical guidance and collaborated with colleagues to clarify incidents and improve support) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 193.40 Tm (consistency.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 172.60 Tm (Store Manager | Oporto) Tj ET
+0.31 0.39 0.51 rg BT /F1 8.5 Tf 1 0 0 1 461.00 172.60 Tm (May 2022 - Apr 2025) Tj ET
+0.17 0.32 0.51 rg 61 161.99999999999957 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 159.60 Tm (Coordinated daily operations, staff rostering, workforce allocation, payroll-cycle activities and service) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 146.80 Tm (standards.) Tj ET
+0.17 0.32 0.51 rg 61 133.39999999999955 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 131.00 Tm (Reviewed sales and operational information to support staffing and stock decisions; coached team members) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 118.20 Tm (and resolved service issues.) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 91.40 Tm (PROJECTS & APPLIED ANALYTICS) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 85.39999999999955 m 546 85.39999999999955 l S
+0.31 0.39 0.51 rg BT /F1 8 Tf 1 0 0 1 504 32 Tm (Page 1 of 2) Tj ET
 endstream
 endobj
 7 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 4390 >>
+<< /Length 2913 >>
 stream
-0.74 0.81 0.89 RG 0.7 w 51 783 m 545 783 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 787.0 Tm (PROJECTS AND APPLIED ANALYTICS) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 765.3 Tm (Student Records Analysis | Excel, Power BI) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 751.5 Tm (- Cleaned and validated approximately 10,000 instrumental-music student records, including duplicate) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 738.1 Tm (checks and information standardisation.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 723.7 Tm (- Developed dashboard views presenting record completeness and data-quality indicators for reporting.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 704.3 Tm (Supermarket Sales Optimisation Analysis | Python, pandas, Excel) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 690.5 Tm (- Prepared and analysed approximately 100,000 retail transactions, addressing duplicate records,) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 677.1 Tm (missing values and inconsistent categories.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 662.8 Tm (- Explored sales patterns, customer segmentation and forecasting; summarised findings using) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 649.4 Tm (dashboards and visual reports.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 630.0 Tm (Weather Forecasting and Data Pipelines | Python, ARIMA, Power BI) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 616.2 Tm (- Prepared and cleaned weather datasets, exploring short-term forecasting with ARIMA and Random) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 602.8 Tm (Forest models.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 588.4 Tm (- Evaluated forecasts with standard error measures and visualised time-series patterns using Power) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 575.0 Tm (BI.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 555.7 Tm (Reddit Sentiment and Mental Health Language Analysis | Python, NLTK, Tableau) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 541.9 Tm (- Processed social media text using natural-language techniques and evaluated classification of) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 528.5 Tm (sentiment and mental-health-related language.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 514.1 Tm (- Communicated research findings through dashboards; the project was not developed as a clinical) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 500.7 Tm (assessment tool.) Tj ET
-0.11 0.16 0.24 rg BT /F2 9.4 Tf 1 0 0 1 51 481.3 Tm (Electricity Consumption Forecasting | MATLAB, ANFIS) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 467.5 Tm (- Explored adaptive neuro-fuzzy inference systems for electricity-demand forecasting using historical) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 454.1 Tm (consumption and weather-related inputs.) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 59 439.8 Tm (- Contributed to publicly available research describing the forecasting approach and its potential) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.1 Tf 1 0 0 1 69 426.4 Tm (applications.) Tj ET
-0.74 0.81 0.89 RG 0.7 w 51 400.0180000000006 m 545 400.0180000000006 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 404.0 Tm (EDUCATION AND QUALIFICATIONS) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 387.3 Tm (Master of Data Science | University of South Australia | 2024) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 370.6 Tm (Bachelor of Computer Science and Technology | Sathyabama Institute of Science and Technology | 2020) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 353.9 Tm (Professional Year Program | Performance Education | Aug 2025 - Aug 2026) Tj ET
-0.74 0.81 0.89 RG 0.7 w 51 325.27600000000064 m 545 325.27600000000064 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 329.3 Tm (COMMUNITY INVOLVEMENT) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 312.5 Tm (Uni Mentor, University of South Australia \(Mar 2022 - Mar 2024\)) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 295.9 Tm (Volunteer, Adelaide Fringe Festival \(Jan 2024 - Apr 2024\)) Tj ET
-0.74 0.81 0.89 RG 0.7 w 51 267.20500000000067 m 545 267.20500000000067 l S
-0.11 0.16 0.24 rg BT /F2 10.7 Tf 1 0 0 1 51 271.2 Tm (REFERENCES) Tj ET
-0.11 0.16 0.24 rg BT /F1 9.3 Tf 1 0 0 1 51 254.5 Tm (Available upon request.) Tj ET
-0.38 0.43 0.51 rg BT /F1 8 Tf 1 0 0 1 507 32 Tm (Page 2 of 2) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 788.00 Tm (Student Records Analysis | Excel, Power BI) Tj ET
+0.17 0.32 0.51 rg 61 777.4 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 775.00 Tm (Reviewed approximately 10,000 student records for duplicates, completeness and consistency, and built) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 762.20 Tm (Power BI views of data quality indicators.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 741.40 Tm (Supermarket Sales Optimisation Analysis | Python, pandas, Excel) Tj ET
+0.17 0.32 0.51 rg 61 730.8000000000001 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 728.40 Tm (Cleaned and analysed approximately 100,000 retail transactions; explored sales patterns, customer) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 715.60 Tm (segmentation and forecasting, with visual reporting.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 694.80 Tm (Weather Forecasting & Data Pipelines | Python, ARIMA, Power BI) Tj ET
+0.17 0.32 0.51 rg 61 684.2000000000002 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 681.80 Tm (Prepared weather data, evaluated short-term forecasting approaches including ARIMA and Random Forest,) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 669.00 Tm (and visualised time-series findings.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 648.20 Tm (Reddit Sentiment & Mental Health Language Analysis | Python, NLTK, Tableau) Tj ET
+0.17 0.32 0.51 rg 61 637.6000000000003 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 635.20 Tm (Applied NLP methods to social-media text and evaluated language classification in an independent, non-clinical) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 622.40 Tm (research project.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 601.60 Tm (Electricity Consumption Forecasting | MATLAB, ANFIS) Tj ET
+0.17 0.32 0.51 rg 61 591.0000000000003 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 588.60 Tm (Investigated adaptive neuro-fuzzy methods for electricity-demand forecasting and contributed to publicly) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 575.80 Tm (available academic research.) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 549.00 Tm (COMMUNITY INVOLVEMENT) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 543.0000000000005 m 546 543.0000000000005 l S
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 529.00 Tm (Uni Mentor, University of South Australia \(Mar 2022 - Mar 2024\) | Adelaide Fringe Festival volunteer \(Jan - Apr) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 515.80 Tm (2024\)) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 488.60 Tm (REFERENCES) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 482.6000000000004 m 546 482.6000000000004 l S
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 468.60 Tm (Available upon request.) Tj ET
+0.31 0.39 0.51 rg BT /F1 8 Tf 1 0 0 1 504 32 Tm (Page 2 of 2) Tj ET
 endstream
 endobj
 xref
 0 9
 0000000000 65535 f 
-0000000016 00000 n 
-0000000065 00000 n 
-0000000128 00000 n 
-0000000198 00000 n 
-0000000273 00000 n 
-0000000409 00000 n 
-0000006062 00000 n 
-0000006198 00000 n 
+0000000023 00000 n 
+0000000072 00000 n 
+0000000135 00000 n 
+0000000205 00000 n 
+0000000280 00000 n 
+0000000416 00000 n 
+0000007083 00000 n 
+0000007219 00000 n 
 trailer
 << /Size 9 /Root 1 0 R >>
 startxref
-10639
+10183
 %%EOF
