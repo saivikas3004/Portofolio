@@ -16,7 +16,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 6616 >>
+<< /Length 6450 >>
 stream
 0.12 0.18 0.30 rg BT /F2 21 Tf 1 0 0 1 215.86 790.00 Tm (Sai Vikas Malladi) Tj ET
 0.31 0.39 0.51 rg BT /F1 8.6 Tf 1 0 0 1 183.68 762.00 Tm (Adelaide, SA  |  0416 130 046  |  saivikasmalladi@gmail.com) Tj ET
@@ -78,8 +78,6 @@ stream
 0.17 0.32 0.51 rg 61 133.39999999999955 3 3 re f
 0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 131.00 Tm (Reviewed sales and operational information to support staffing and stock decisions; coached team members) Tj ET
 0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 118.20 Tm (and resolved service issues.) Tj ET
-0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 91.40 Tm (PROJECTS & APPLIED ANALYTICS) Tj ET
-0.76 0.82 0.90 RG 0.8 w 49 85.39999999999955 m 546 85.39999999999955 l S
 0.31 0.39 0.51 rg BT /F1 8 Tf 1 0 0 1 504 32 Tm (Page 1 of 2) Tj ET
 endstream
 endobj
@@ -87,35 +85,37 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 2913 >>
+<< /Length 2959 >>
 stream
-0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 788.00 Tm (Student Records Analysis | Excel, Power BI) Tj ET
-0.17 0.32 0.51 rg 61 777.4 3 3 re f
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 775.00 Tm (Reviewed approximately 10,000 student records for duplicates, completeness and consistency, and built) Tj ET
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 762.20 Tm (Power BI views of data quality indicators.) Tj ET
-0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 741.40 Tm (Supermarket Sales Optimisation Analysis | Python, pandas, Excel) Tj ET
-0.17 0.32 0.51 rg 61 730.8000000000001 3 3 re f
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 728.40 Tm (Cleaned and analysed approximately 100,000 retail transactions; explored sales patterns, customer) Tj ET
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 715.60 Tm (segmentation and forecasting, with visual reporting.) Tj ET
-0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 694.80 Tm (Weather Forecasting & Data Pipelines | Python, ARIMA, Power BI) Tj ET
-0.17 0.32 0.51 rg 61 684.2000000000002 3 3 re f
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 681.80 Tm (Prepared weather data, evaluated short-term forecasting approaches including ARIMA and Random Forest,) Tj ET
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 669.00 Tm (and visualised time-series findings.) Tj ET
-0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 648.20 Tm (Reddit Sentiment & Mental Health Language Analysis | Python, NLTK, Tableau) Tj ET
-0.17 0.32 0.51 rg 61 637.6000000000003 3 3 re f
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 635.20 Tm (Applied NLP methods to social-media text and evaluated language classification in an independent, non-clinical) Tj ET
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 622.40 Tm (research project.) Tj ET
-0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 601.60 Tm (Electricity Consumption Forecasting | MATLAB, ANFIS) Tj ET
-0.17 0.32 0.51 rg 61 591.0000000000003 3 3 re f
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 588.60 Tm (Investigated adaptive neuro-fuzzy methods for electricity-demand forecasting and contributed to publicly) Tj ET
-0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 575.80 Tm (available academic research.) Tj ET
-0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 549.00 Tm (COMMUNITY INVOLVEMENT) Tj ET
-0.76 0.82 0.90 RG 0.8 w 49 543.0000000000005 m 546 543.0000000000005 l S
-0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 529.00 Tm (Uni Mentor, University of South Australia \(Mar 2022 - Mar 2024\) | Adelaide Fringe Festival volunteer \(Jan - Apr) Tj ET
-0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 515.80 Tm (2024\)) Tj ET
-0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 488.60 Tm (REFERENCES) Tj ET
-0.76 0.82 0.90 RG 0.8 w 49 482.6000000000004 m 546 482.6000000000004 l S
-0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 468.60 Tm (Available upon request.) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49 762 Tm (PROJECTS & APPLIED ANALYTICS) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 756 m 546 756 l S
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 748.00 Tm (Student Records Analysis | Excel, Power BI) Tj ET
+0.17 0.32 0.51 rg 61 737.40 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 735.00 Tm (Reviewed approximately 10,000 student records for duplicates, completeness and consistency, and built) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 722.20 Tm (Power BI views of data quality indicators.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 701.40 Tm (Supermarket Sales Optimisation Analysis | Python, pandas, Excel) Tj ET
+0.17 0.32 0.51 rg 61 690.80 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 688.40 Tm (Cleaned and analysed approximately 100,000 retail transactions; explored sales patterns, customer) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 675.60 Tm (segmentation and forecasting, with visual reporting.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 654.80 Tm (Weather Forecasting & Data Pipelines | Python, ARIMA, Power BI) Tj ET
+0.17 0.32 0.51 rg 61 644.20 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 641.80 Tm (Prepared weather data, evaluated short-term forecasting approaches including ARIMA and Random Forest,) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 629.00 Tm (and visualised time-series findings.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 608.20 Tm (Reddit Sentiment & Mental Health Language Analysis | Python, NLTK, Tableau) Tj ET
+0.17 0.32 0.51 rg 61 597.60 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 595.20 Tm (Applied NLP methods to social-media text and evaluated language classification in an independent, non-clinical) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 582.40 Tm (research project.) Tj ET
+0.12 0.18 0.30 rg BT /F2 9.55 Tf 1 0 0 1 49.00 561.60 Tm (Electricity Consumption Forecasting | MATLAB, ANFIS) Tj ET
+0.17 0.32 0.51 rg 61 551.00 3 3 re f
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 548.60 Tm (Investigated adaptive neuro-fuzzy methods for electricity-demand forecasting and contributed to publicly) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.35 Tf 1 0 0 1 72.00 535.80 Tm (available academic research.) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 509.00 Tm (COMMUNITY INVOLVEMENT) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 503.00 m 546 503.00 l S
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 489.00 Tm (Uni Mentor, University of South Australia \(Mar 2022 - Mar 2024\) | Adelaide Fringe Festival volunteer \(Jan - Apr) Tj ET
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 475.80 Tm (2024\)) Tj ET
+0.17 0.32 0.51 rg BT /F2 10.5 Tf 1 0 0 1 49.00 448.60 Tm (REFERENCES) Tj ET
+0.76 0.82 0.90 RG 0.8 w 49 442.60 m 546 442.60 l S
+0.12 0.18 0.30 rg BT /F1 9.5 Tf 1 0 0 1 49.00 428.60 Tm (Available upon request.) Tj ET
 0.31 0.39 0.51 rg BT /F1 8 Tf 1 0 0 1 504 32 Tm (Page 2 of 2) Tj ET
 endstream
 endobj
@@ -128,10 +128,10 @@ xref
 0000000205 00000 n 
 0000000280 00000 n 
 0000000416 00000 n 
-0000007083 00000 n 
-0000007219 00000 n 
+0000006917 00000 n 
+0000007053 00000 n 
 trailer
 << /Size 9 /Root 1 0 R >>
 startxref
-10183
+10063
 %%EOF
