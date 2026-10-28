@@ -32,21 +32,44 @@ export async function onRequestPost({request,env}){
     if(count>=8)return json({error:'Too many questions. Please try again in a minute.'},429);
     await env.CHAT_RATE.put(key,String(count+1),{expirationTtl:120});
   }
-  const model=env.GEMINI_MODEL||'gemini-2.5-flash';
-  try{
-    const response=await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent',{
-      method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':env.GEMINI_API_KEY},
-      body:JSON.stringify({systemInstruction:{parts:[{text:KNOWLEDGE}]},contents:[...safeHistory,{role:'user',parts:[{text:message}]}],generationConfig:{temperature:0.25,maxOutputTokens:500}}),signal:AbortSignal.timeout(20000)
-    });
-    if(!response.ok){
-      if(response.status===429)return json({error:'The free AI allowance is temporarily exhausted. Please try later.'},503);
-      if(response.status===404)return json({error:'The configured Gemini model is unavailable. Check GEMINI_MODEL.'},503);
-      return json({error:'The AI service is temporarily unavailable.'},503);
+  // Prefer a low-latency supported model for public visitors. Honour an explicitly
+  // configured model first, but recover if it is inaccessible to the current API key.
+  const configured=typeof env.GEMINI_MODEL==='string'?env.GEMINI_MODEL.trim():'';
+  const models=[configured,'gemini-3.5-flash-lite','gemini-3.8-flash']
+    .filter((name,index,all)=>name&&all.indexOf(name)===index);
+  const body=JSON.stringify({
+    systemInstruction:{parts:[{text:KNOWLEDGE}]},
+    contents:[...safeHistory,{role:'user',parts:[{text:message}]}],
+    generationConfig:{temperature:0.25,maxOutputTokens:600}
+  });
+  let lastStatus=503,issue='The portfolio assistant is temporarily unavailable.';
+  for(const model of models){
+    let response;
+    try{
+      response=await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(model)+':generateContent',{
+        method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':env.GEMINI_API_KEY},
+        body,signal:AbortSignal.timeout(16000)
+      });
+    }catch(error){
+      issue='The AI request timed out or the service could not be reached.';
+      continue;
     }
-    const result=await response.json();
-    const reply=(result.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join('').trim();
-    if(!reply)return json({error:'No answer was generated. Please try rephrasing.'},502);
-    return json({reply:reply.slice(0,3000)});
-  }catch{return json({error:'The AI service could not be reached. Please try again.'},503)}
+    if(response.ok){
+      let result;try{result=await response.json()}catch{issue='Gemini returned an unexpected response.';continue}
+      const reply=(result.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join('').trim();
+      if(reply)return json({reply:reply.slice(0,3000)});
+      issue='Gemini returned an empty answer. Please try rephrasing.';
+      continue;
+    }
+    lastStatus=response.status;
+    if(response.status===404){issue='The selected Gemini model is not available to this API key.';continue}
+    if([408,500,502,503,504].includes(response.status)){issue='Gemini is temporarily overloaded. Please try again shortly.';continue}
+    if(response.status===429){issue='Gemini usage limits were reached. Please try again later.';break}
+    if(response.status===401||response.status===403){issue='The AI service is not authorised. Please contact the portfolio owner.';break}
+    if(response.status===400){issue='Gemini rejected this request. Please contact the portfolio owner.';break}
+    issue='The AI service is temporarily unavailable.';
+    break;
+  }
+  return json({error:issue},lastStatus===429?429:503);
 }
 export function onRequestGet(){return json({error:'Use POST to chat.'},405)}
