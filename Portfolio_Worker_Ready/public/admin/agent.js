@@ -61,14 +61,15 @@ apply.addEventListener('click',()=>{
 });
 const DEFAULT_PRESET='Use Australian English and a professional, clear, confident tone. Make the résumé ATS-friendly with standard headings and concise accomplishment-oriented bullets that are strictly supported by my saved career history. Tailor keywords to the job description only where the evidence supports them. Preserve correct employers, titles and dates. Include relevant projects and education. Write a specific, natural cover letter without clichés, exaggerated claims or fabricated metrics. Keep the uploaded résumé section order: SKILLS (Data Management, Technical Proficiency, Stakeholder and Communication Skills), EDUCATION & QUALIFICATIONS, WORK EXPERIENCE, PROJECTS, VOLUNTEER & COMMUNITY INVOLVEMENT, REFERENCES. Include only substantiated entries, using standard section headings and bullet points. The uploaded cover letter layout uses centered name/contact, date, hiring manager/address, Dear Hiring Manager greeting, evidence-led paragraphs and Yours sincerely sign-off. Avoid tables, emojis, graphics and generic filler.';
 const PRESET_KEY='sv_application_preset_v1';
-const preset=$('package-rules'),jd=$('package-jd'),role=$('package-role'),company=$('package-company'),generate=$('package-generate'),results=$('package-results'),resume=$('package-resume'),letter=$('package-letter'),packageStatus=$('package-status');
+const GUIDE_KEY='sv_resume_writing_guide_v1';
+const guide=$('package-guide'),preset=$('package-rules'),jd=$('package-jd'),role=$('package-role'),company=$('package-company'),generate=$('package-generate'),results=$('package-results'),resume=$('package-resume'),letter=$('package-letter'),packageStatus=$('package-status');
 if(preset&&generate){
- try{preset.value=localStorage.getItem(PRESET_KEY)||DEFAULT_PRESET}catch{preset.value=DEFAULT_PRESET}
+ try{preset.value=localStorage.getItem(PRESET_KEY)||DEFAULT_PRESET;guide.value=localStorage.getItem(GUIDE_KEY)||''}catch{preset.value=DEFAULT_PRESET;guide.value=''}
  const stored=readProfile();
  role.value=stored.target||'';
  company.value=stored.company||'';
  jd.value=stored.jobdesc||'';
- const savePreset=()=>{try{localStorage.setItem(PRESET_KEY,preset.value.slice(0,3500));packageStatus.textContent='Writing instructions saved in this browser.'}catch{packageStatus.textContent='Could not save the preset. Check browser storage permissions.'}};
+ const savePreset=()=>{try{localStorage.setItem(PRESET_KEY,preset.value.slice(0,3500));localStorage.setItem(GUIDE_KEY,guide.value.slice(0,9000));packageStatus.textContent='Writing instructions and résumé guide saved for future applications.'}catch{packageStatus.textContent='Could not save the preset. Check browser storage permissions.'}};
  $('package-save-rules').addEventListener('click',savePreset);
  const api=async(body)=>{
   const token=sessionStorage.getItem('sv_admin_tab_session_v1');
@@ -81,7 +82,7 @@ if(preset&&generate){
   return data;
  };
  async function generatePart(kind,profile,presetText){
-  return api({kind,profile,preset:presetText});
+  return api({kind,profile,preset:presetText,resumeGuide:kind==='package_resume'?guide.value.slice(0,9000):''});
  }
  generate.addEventListener('click',async()=>{
   if(!jd.value.trim()){packageStatus.textContent='Paste a job description before generating.';jd.focus();return}
@@ -98,7 +99,7 @@ if(preset&&generate){
   // Keep any successful document intact if the other call fails.
   resume.value='';letter.value='';
   $('package-notes').textContent='Review both drafts and verify all dates and claims before sending.';
-  try{localStorage.setItem(PRESET_KEY,rules)}catch{}
+  try{localStorage.setItem(PRESET_KEY,rules);localStorage.setItem(GUIDE_KEY,guide.value.slice(0,9000))}catch{}
   try{
    packageStatus.textContent='Step 1 of 2: generating your tailored résumé…';
    try{
