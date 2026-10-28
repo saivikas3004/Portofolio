@@ -406,7 +406,44 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #35
 @media(max-width:900px){#expertise .skills-visible .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:610px){#expertise .skills-visible .cards{grid-template-columns:minmax(0,1fr);gap:12px}#expertise .skills-visible .card{padding:21px!important}}
 </style>
-</head>
+<style id="tools-methods-spacing-v18">
+/* Compact learning-section skills panel and readable supporting note. */
+#learning .skills-strip,.learning .skills-strip{
+  margin-top:20px!important;
+  padding:24px 28px!important;
+  min-height:0!important;
+  height:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  gap:12px!important;
+  border-color:#cad7e8!important;
+}
+#learning .skills-strip h3,.learning .skills-strip h3{
+  margin:0!important;
+  line-height:1.25!important;
+  color:#182d50!important;
+}
+#learning .skills-strip p,.learning .skills-strip p{
+  margin:0!important;
+  line-height:1.55!important;
+  color:#465c7a!important;
+}
+#learning .skills-strip p.note,.learning .skills-strip p.note{
+  margin-top:0!important;
+  padding-top:10px!important;
+  border-top:1px solid #d8e1ed!important;
+  color:#516581!important;
+  font-size:14px!important;
+  line-height:1.55!important;
+  opacity:1!important;
+}
+@media(max-width:760px){
+ #learning .skills-strip,.learning .skills-strip{padding:20px!important;gap:10px!important}
+ #learning .skills-strip h3,.learning .skills-strip h3{font-size:23px!important}
+ #learning .skills-strip p.note,.learning .skills-strip p.note{font-size:13px!important}
+}
+</style></head>
 <body><div aria-hidden="true" id="reading-progress-v4"></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap nav-inner"><a aria-label="Sai Vikas Malladi home" class="logo" href="#top">sai<span>vikas</span>. ↗</a><a aria-label="Owner sign-in — Career Studio" class="owner-entry" href="/admin/" title="Owner sign-in"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="11" rx="2" width="14" x="5" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></a><button aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation" class="menu">☰</button><nav aria-label="Main navigation" class="navlinks" id="navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/assets/Sai_Vikas_Malladi_Resume.pdf" download>Résumé ↓</a><a href="#learning">Education</a><a href="#career-tools">More tools</a><a class="navcta" href="#contact">Let's connect ↗</a></nav></div></header>
