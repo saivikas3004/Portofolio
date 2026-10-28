@@ -26,17 +26,17 @@ $('save-resume').onclick=()=>{readFields();persist();updatePreview('resume')};
 $('print-resume').onclick=()=>{readFields();persist();printDoc('resume')};
 $('doc-resume').onclick=()=>{readFields();persist();
  const lines=[data.tailored||data.summary,'SKILLS','Technical Proficiency',...(data.skills||'').split(',').map(v=>'• '+v.trim()).filter(v=>v.length>2),'EDUCATION & QUALIFICATIONS',data.education,'WORK EXPERIENCE'];
- for(const role of data.experience){lines.push(role.title+' | '+role.organisation+' | '+role.dates);for(const item of String(role.details||'').split(/\\n|(?<=\\.)\\s+(?=[A-Z])/)){if(item.trim())lines.push('• '+item.trim())}}
+ for(const role of data.experience){lines.push(role.title+' | '+role.organisation+' | '+role.dates);for(const item of String(role.details||'').split(/\n|(?<=\.)\s+(?=[A-Z])/)){if(item.trim())lines.push('• '+item.trim())}}
  lines.push('PROJECTS');
- for(const project of data.projects){lines.push(project.title);for(const item of String(project.details||'').split(/\\n|(?<=\\.)\\s+(?=[A-Z])/)){if(item.trim())lines.push('• '+item.trim())}}
+ for(const project of data.projects){lines.push(project.title);for(const item of String(project.details||'').split(/\n|(?<=\.)\s+(?=[A-Z])/)){if(item.trim())lines.push('• '+item.trim())}}
  lines.push('REFERENCES','Available upon request');
- try{window.CareerStudioTemplates.download('resume',lines.join('\\n'),{name:data.name})}catch(err){status(err.message)}
+ try{window.CareerStudioTemplates.download('resume',lines.join('\n'),{name:data.name})}catch(err){status(err.message)}
 };
 $('draft-letter').onclick=()=>{readFields();if(data.letterbody&&!confirm('Replace the current letter text with a new starting draft?'))return;data.letterbody=`Dear Hiring Manager,\n\nI am writing to apply for the ${data.letterrole||'advertised position'}${data.company?' at '+data.company:''}. My background combines database administration, data science and operational management.\n\nIn my current role, I support electronic records, database-related workflows, data validation and information governance. I also bring experience coordinating operational processes and communicating with colleagues across different functions.\n\nI would welcome the opportunity to discuss how this experience could contribute to your team.\n\nKind regards,\n${data.name}`;fillFields();updatePreview('letter');status('Starting draft created. Tailor it to the position and check accuracy.')};
 $('save-letter').onclick=()=>{readFields();persist();updatePreview('letter')};
 $('print-letter').onclick=()=>{readFields();persist();printDoc('letter')};
 $('doc-letter').onclick=()=>{readFields();persist();
- const content=['Hiring Manager',data.company||'',data.location||'','Dear Hiring Manager,',data.letterbody||'','Yours sincerely,',data.name||'Sai Vikas Malladi'].filter(Boolean).join('\\n');
+ const content=['Hiring Manager',data.company||'',data.location||'','Dear Hiring Manager,',data.letterbody||'','Yours sincerely,',data.name||'Sai Vikas Malladi'].filter(Boolean).join('\n');
  try{window.CareerStudioTemplates.download('letter',content,{name:data.name})}catch(err){status(err.message)}
 };
 $('export').onclick=()=>{readFields();persist();download('sai_vikas_career_studio_backup.json',JSON.stringify(data,null,2),'application/json')};
