@@ -45,6 +45,14 @@ export default {
    }
    return json({error:'Sign in required.'},401);
   }
+  if(path==='/assets/Sai_Vikas_Malladi_Resume.pdf'&&request.method==='GET'){
+   const response=await env.ASSETS.fetch(request);
+   const h=new Headers(response.headers);
+   h.set('Content-Type','application/pdf');
+   h.set('Cache-Control','public, max-age=0, no-cache, must-revalidate');
+   h.set('X-Content-Type-Options','nosniff');
+   return new Response(response.body,{status:response.status,statusText:response.statusText,headers:h});
+  }
   if(path==='/api/chat'){if(request.method!=='POST')return json({error:'Use POST to chat.'},405);return geminiPost({request,env})}
   return env.ASSETS.fetch(request);
  }
