@@ -5,7 +5,7 @@
 const TE=new TextEncoder();
 const x=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');
 const contact='0416 130 046 | saivikasmalladi@gmail.com | linkedin.com/in/saivikasmalladi';
-const headings=new Set(['SKILLS','EDUCATION & QUALIFICATIONS','WORK EXPERIENCE','PROJECTS','VOLUNTEER & COMMUNITY INVOLVEMENT','REFERENCES']);
+const headings=new Set(['PROFESSIONAL PROFILE','KEY SKILLS SUMMARY','EDUCATIONAL BACKGROUND','CERTIFICATIONS','UNIVERSITY PROJECT','RELEVANT EMPLOYMENT EXPERIENCE','OTHER EMPLOYMENT EXPERIENCE','PERSONAL ATTRIBUTES','REFERENCES','SKILLS','EDUCATION & QUALIFICATIONS','WORK EXPERIENCE','PROJECTS','VOLUNTEER & COMMUNITY INVOLVEMENT']);
 const subheadings=new Set(['DATA MANAGEMENT','TECHNICAL PROFICIENCY','STAKEHOLDER AND COMMUNICATION SKILLS']);
 const normalize=s=>String(s||'').replace(/\r/g,'').split('\n').map(v=>v.trim()).filter(Boolean);
 const paragraph=(value,kind='body')=>{
@@ -31,7 +31,7 @@ const xml=(type,text,meta={})=>{
    if(headings.has(upper)){section=upper;hasHeader=true;body.push(paragraph(upper,'section'));continue}
    if(subheadings.has(upper)){body.push(paragraph(line,'job'));continue}
    if(/^[•●▪\-–*]\s+/.test(line)){body.push(paragraph(line,'bullet'));continue}
-   if(/^(?:professional summary|profile|summary)\s*:?\s*$/i.test(line))continue;
+   if(/^(?:professional summary|profile|summary)\s*:?\s*$/i.test(line)){body.push(paragraph('PROFESSIONAL PROFILE','section'));continue;}
    if(/^(?:master of|bachelor of|professional year|database administrator|public administration|it support consultant|store manager|student records analysis|supermarket sales)/i.test(line)&&section){body.push(paragraph(line,'job'));continue}
    if(!hasHeader&&/^(?:experience|skills|education|projects)$/i.test(line))continue;
    body.push(paragraph(line,'body'));
